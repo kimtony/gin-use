@@ -1,0 +1,7 @@
+.env
+.idea/*
+Public/Logs/*
+main
+nohup.out
+go.sum
+go.mod
