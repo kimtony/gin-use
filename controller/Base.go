@@ -1,4 +1,4 @@
-package Api
+package controller
 
 import (
 	"net/http"

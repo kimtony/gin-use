@@ -1,24 +1,26 @@
 package main
 
 import (
-	"gin-demo/Databases"
+	"gin-demo/database"
+	"os"
 
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	_ "github.com/joho/godotenv/autoload"
 
-	"gin-demo/Routes"
+	"gin-demo/routes"
 )
 
 func main() {
+	//env
 
 	//数据库
-	Databases.Init()
-
+	database.Init()
+	println(os.Getenv("DB_HOST"), os.Getenv("DB_USER"))
 	//初始化路由
-	r := Routes.InitRouter()
+	r := routes.InitRouter()
 
 	r.Run(":" + "8081")
 
-	defer Databases.DB.Close()
+	defer database.DB.Close()
 
 }

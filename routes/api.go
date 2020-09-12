@@ -1,8 +1,8 @@
-package Routes
+package routes
 
 import (
-	"gin-demo/Controllers/Api"
-	"gin-demo/Middleware"
+	"gin-demo/controller"
+	"gin-demo/middleware"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -13,19 +13,21 @@ var r = gin.Default()
 func InitRouter() *gin.Engine {
 
 	// r.Use(Middleware.Session("xiaojipu"))
-	r.Use(Middleware.CORSMiddleware())
+	r.Use(middleware.CORSMiddleware())
 
 	api := r.Group("/api")
 	{
 
 		//健康检查
-		api.GET("/health", Api.Health)
+		api.GET("/health", controller.Health)
 
 		api.GET("/test", func(c *gin.Context) {
 			c.JSON(http.StatusOK, map[string]interface{}{
-				"hello": "kenny",
+				"hello": "gin",
 			})
 		})
+		
+		api.GET("/activity", controller.Activity)
 	}
 
 	return r
