@@ -2,7 +2,6 @@ package main
 
 import (
 	"gin-demo/database"
-	"gin-demo/middleware"
 	"os"
 
 	"github.com/gin-gonic/gin"
@@ -15,8 +14,7 @@ import (
 var r = gin.Default()
 
 func main() {
-	//middleware
-	r.Use(middleware.TestRead())
+
 	//数据库
 	database.Init()
 	println(os.Getenv("DB_HOST"), os.Getenv("DB_USER"))
