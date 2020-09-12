@@ -12,4 +12,4 @@ export REDIS_HOST=127.0.0.1:6379
 export REDIS_PASSWORD=
 
 
-go run main.go
+gowatch

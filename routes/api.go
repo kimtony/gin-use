@@ -14,7 +14,7 @@ func InitRouter() *gin.Engine {
 
 	// r.Use(Middleware.Session("xiaojipu"))
 	r.Use(middleware.CORSMiddleware())
-
+	
 	api := r.Group("/api")
 	{
 
@@ -26,7 +26,7 @@ func InitRouter() *gin.Engine {
 				"hello": "gin",
 			})
 		})
-		
+
 		api.GET("/activity", controller.Activity)
 	}
 
