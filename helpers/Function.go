@@ -3,16 +3,33 @@ package Helpers
 import (
 	"errors"
 	"fmt"
-	"github.com/sirupsen/logrus"
-	"github.com/tidwall/gjson"
 	"io/ioutil"
+	"log"
 	"math/rand"
 	"net/http"
 	"os"
 	"time"
+
+	"github.com/sirupsen/logrus"
+	"github.com/sony/sonyflake"
+	"github.com/tidwall/gjson"
 )
 
 var Log = logrus.New()
+
+/*
+ * 生成uuid   Sonyflake
+ */
+func generateId() uint64 {
+	//返回64位
+	flake := sonyflake.NewSonyflake(sonyflake.Settings{})
+	id, err := flake.NextID()
+	if err != nil {
+		log.Fatalf("flake.NextID() failed with %s\n", err)
+	}
+	// fmt.Printf("github.com/sony/sonyflake:   %x\n", id)
+	return id
+}
 
 /**
  * 创建日志并写日志

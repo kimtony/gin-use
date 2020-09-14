@@ -17,8 +17,10 @@ require (
 	github.com/lib/pq v1.1.1
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
+	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/silenceper/gowatch v0.0.0-20200907024519-9e7caea06269 // indirect
 	github.com/sirupsen/logrus v1.6.0
+	github.com/sony/sonyflake v1.0.0
 	github.com/tidwall/gjson v1.6.1
 	golang.org/x/crypto v0.0.0-20191205180655-e7c4368fe9dd
 	golang.org/x/sys v0.0.0-20200821140526-fda516888d29 // indirect

@@ -14,7 +14,6 @@ import (
 var r = gin.Default()
 
 func main() {
-
 	//数据库
 	database.Init()
 	println(os.Getenv("DB_HOST"), os.Getenv("DB_USER"))
