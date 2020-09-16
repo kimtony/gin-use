@@ -13,6 +13,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/sony/sonyflake"
 	"github.com/tidwall/gjson"
+	"golang.org/x/crypto/bcrypt"
 )
 
 var Log = logrus.New()
@@ -20,7 +21,7 @@ var Log = logrus.New()
 /*
  * 生成uuid   Sonyflake
  */
-func generateId() uint64 {
+func GenerateId() uint64 {
 	//返回64位
 	flake := sonyflake.NewSonyflake(sonyflake.Settings{})
 	id, err := flake.NextID()
@@ -29,6 +30,23 @@ func generateId() uint64 {
 	}
 	// fmt.Printf("github.com/sony/sonyflake:   %x\n", id)
 	return id
+}
+
+/*
+ *密码加密
+ */
+func GeneratePassword(userPassword string) ([]byte, error) {
+	return bcrypt.GenerateFromPassword([]byte(userPassword), bcrypt.DefaultCost)
+}
+
+/*
+ *密码校验
+ */
+func ValidatePassword(userPassword string, hashed string) (isOK bool, err error) {
+	if err = bcrypt.CompareHashAndPassword([]byte(hashed), []byte(userPassword)); err != nil {
+		return false, errors.New("密码比对错误！")
+	}
+	return true, nil
 }
 
 /**

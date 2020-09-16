@@ -2,21 +2,26 @@ package main
 
 import (
 	"gin-demo/database"
-	"os"
+
+	// "os"
+	// "strconv"
+
+	"gin-demo/routes"
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	_ "github.com/joho/godotenv/autoload"
-
-	"gin-demo/routes"
 )
 
 var r = gin.Default()
 
 func main() {
-	//数据库
-	database.Init()
-	println(os.Getenv("DB_HOST"), os.Getenv("DB_USER"))
+
+	//是否开启数据库调试
+	// enableDBLogMode, _ := strconv.ParseBool(os.Getenv("ENABLE_DB_LOGMODE"))
+	// database.DB.LogMode(enableDBLogMode)
+
+	test()
 	//初始化路由
 	r := routes.InitRouter()
 

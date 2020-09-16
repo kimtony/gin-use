@@ -1,9 +1,10 @@
 
 export DB_HOST="192.168.1.5"
-export DB_PORT="5432"
+export DB_PORT=5432
 export DB_USER="ada"
 export DB_PASS="pass_2020"
 export DB_NAME="ada"
+export ENABLE_DB_LOGMODE=true
 
 export ACCESS_SECRET="ashasdjhjhjadhasdaa123"
 export REFERSH_SECRET="hjsajdhkjhf41jhagggdga"

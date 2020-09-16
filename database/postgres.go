@@ -1,36 +1,44 @@
 package database
 
 import (
-	"database/sql"
 	"fmt"
 	"os"
 
-	_ "github.com/lib/pq"
+	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
+	_ "github.com/joho/godotenv/autoload"
 )
 
 type error interface {
 	Error() string
 }
 
-var DB *sql.DB
+var DB *gorm.DB
 
-func Init() error {
+func init() {
 
 	var err error
 	psqlInfo := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable", os.Getenv("DB_HOST"), os.Getenv("DB_PORT"), os.Getenv("DB_USER"), os.Getenv("DB_PASS"), os.Getenv("DB_NAME"))
-	DB, err = sql.Open("postgres", psqlInfo)
+	DB, err = gorm.Open("postgres", psqlInfo)
 
 	if err != nil {
 		println("failed to connect database", err.Error())
-		panic(err)
+	} else {
+		fmt.Println("connect success")
 	}
-	// defer db.Close()
-	err = DB.Ping()
-	if err != nil {
-		println("failed to connect database", err.Error())
-		panic(err)
-	}
-	fmt.Println("Successfully connected!")
-	return nil
 
+	if DB.Error != nil {
+		println("failed to connect database", err.Error())
+	}
+
+	//gorm禁用表复数
+	DB.SingularTable(true)
+
+	// 数据库自动迁移
+	// db.Debug().AutoMigrate(&Account{}, &Contact{})
+}
+
+// 返回数据库对象的指针
+func GetDB() *gorm.DB {
+	return DB
 }
