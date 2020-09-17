@@ -5,6 +5,7 @@ go 1.14
 require (
 	github.com/aliyun/alibaba-cloud-sdk-go v1.61.474
 	github.com/dchest/captcha v0.0.0-20200903113550-03f5f0333e1f
+	github.com/getsentry/sentry-go v0.7.0
 	github.com/gin-contrib/sessions v0.0.3
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-playground/validator/v10 v10.3.0 // indirect

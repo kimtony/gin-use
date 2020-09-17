@@ -1,7 +1,7 @@
 package controller
 
 import (
-	Helpers "gin-demo/helpers"
+	"gin-demo/helpers"
 	"net/http"
 	"time"
 
@@ -27,7 +27,7 @@ func Health(c *gin.Context) {
 	// 周几 Mon,Monday
 
 	now := time.Now()
-	id := Helpers.GenerateId()
+	id := helpers.GenerateId()
 	c.JSON(http.StatusOK, map[string]interface{}{
 		"Time": now,
 		"id":   id,

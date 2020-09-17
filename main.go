@@ -2,6 +2,7 @@ package main
 
 import (
 	"gin-demo/database"
+	"gin-demo/helpers"
 
 	// "os"
 	// "strconv"
@@ -26,6 +27,9 @@ func main() {
 	r := routes.InitRouter()
 
 	r.Run(":" + "8081")
+
+	//sentry
+	helpers.Sentry()
 
 	defer database.DB.Close()
 

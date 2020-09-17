@@ -30,7 +30,6 @@ func init() {
 	if DB.Error != nil {
 		println("failed to connect database", err.Error())
 	}
-
 	//gorm禁用表复数
 	DB.SingularTable(true)
 

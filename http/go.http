@@ -5,4 +5,4 @@ GET  {{baseUrl}}/api/health
 
 
 ###
-GET  {{baseUrl}}/api/activity
+GET  {{baseUrl}}/api/staff
