@@ -6,3 +6,7 @@ GET  {{baseUrl}}/api/health
 
 ###
 GET  {{baseUrl}}/api/staff
+
+
+###
+GET {{baseUrl}}/api/redis/test

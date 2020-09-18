@@ -6,6 +6,12 @@ import (
 )
 
 func test() {
+
+	pwdHash()
+
+}
+
+func pwdHash() {
 	//加密密码
 	hash, err := helpers.GeneratePassword("123456")
 	fmt.Println("加密密码:", string(hash), err)

@@ -1,8 +1,11 @@
 package main
 
 import (
+	// "fmt"
 	"gin-demo/database"
 	"gin-demo/helpers"
+	"os"
+	"strconv"
 
 	// "os"
 	// "strconv"
@@ -19,10 +22,12 @@ var r = gin.Default()
 func main() {
 
 	//是否开启数据库调试
-	// enableDBLogMode, _ := strconv.ParseBool(os.Getenv("ENABLE_DB_LOGMODE"))
-	// database.DB.LogMode(enableDBLogMode)
+	enableDBLogMode, _ := strconv.ParseBool(os.Getenv("ENABLE_DB_LOGMODE"))
+	database.DB.LogMode(enableDBLogMode)
 
-	test()
+	//测试文件
+	// test()
+
 	//初始化路由
 	r := routes.InitRouter()
 

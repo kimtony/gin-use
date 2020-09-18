@@ -1,5 +1,12 @@
 # gin-demo
 
+# 运行说明
+* go mod init 
+* go install
+* ./start.sh
+* 如果找不到这个包go get github.com/silenceper/gowatch
+
+
 # go相关资料文档
 * https://www.bookstack.cn/read/topgoer/b0a74e6ce3f8548b.md
 

@@ -24,7 +24,7 @@ func init() {
 	if err != nil {
 		println("failed to connect database", err.Error())
 	} else {
-		fmt.Println("connect success")
+		fmt.Println("pgsql connect success !!!")
 	}
 
 	if DB.Error != nil {

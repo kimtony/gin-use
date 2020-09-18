@@ -22,6 +22,10 @@ func InitRouter() *gin.Engine {
 
 		//员工
 		api.GET("/staff", controller.Staff)
+
+		//redis测试
+		api.GET("/redis/test", controller.RedisTest)
+
 	}
 
 	return r
