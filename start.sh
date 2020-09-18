@@ -14,6 +14,7 @@ export REDIS_PASS="redis_pass_2020"
 #dbdebug
 export ENABLE_DB_LOGMODE=true
 
-
+#JWT
+export JWT_SECRET=udijefnsdfj
 
 gowatch

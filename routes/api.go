@@ -26,6 +26,9 @@ func InitRouter() *gin.Engine {
 		//redis测试
 		api.GET("/redis/test", controller.RedisTest)
 
+		//token
+		api.GET("/token/test", controller.Token)
+
 	}
 
 	return r

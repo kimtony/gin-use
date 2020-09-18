@@ -5,6 +5,7 @@ go 1.14
 require (
 	github.com/aliyun/alibaba-cloud-sdk-go v1.61.474
 	github.com/dchest/captcha v0.0.0-20200903113550-03f5f0333e1f
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/getsentry/sentry-go v0.7.0
 	github.com/gin-contrib/sessions v0.0.3
 	github.com/gin-gonic/gin v1.6.3
@@ -12,6 +13,7 @@ require (
 	github.com/go-redis/redis v6.15.9+incompatible
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/gofiber/fiber v1.14.5
+	github.com/gogf/gf v1.13.6
 	github.com/golang/mock v1.4.4 // indirect
 	github.com/golang/protobuf v1.4.2 // indirect
 	github.com/jinzhu/gorm v1.9.16

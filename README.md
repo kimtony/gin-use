@@ -24,6 +24,7 @@
 * 生成uuid   Sonyflake
 * 验证码
 * 密码加密（hash）验证密码
+* jwt token
 
 ## middleware
 * servicedefine校验
@@ -48,3 +49,8 @@
 ## sentry 
 * http://192.168.1.10:9000/auth/login/sentry/
 * yuezhi@qq.com   pass@2020
+
+
+
+
+

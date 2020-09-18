@@ -3,6 +3,7 @@ package controller
 import (
 	"fmt"
 	"gin-demo/database"
+	"gin-demo/helpers"
 	"gin-demo/repos"
 	"net/http"
 
@@ -15,6 +16,31 @@ func Staff(c *gin.Context) {
 	c.JSON(http.StatusOK, ReturnSuccess(data))
 }
 
+//token
+func Token(c *gin.Context) {
+	//生成token
+	inpayload := map[string]interface{}{
+		"account": "3345472145214",
+		"name":    "lk",
+		"age":     18,
+	}
+
+	token, err := helpers.GenToken(inpayload)
+	println("------token-------", token)
+	if err != nil {
+		println("生成token报错")
+	}
+
+	verfiy, err := helpers.VerifyAction(token)
+
+	println("--------verfiy-----", verfiy)
+
+	if err != nil {
+		println("解析token报错")
+	}
+}
+
+//redis
 func RedisTest(c *gin.Context) {
 
 	//redis init
@@ -36,6 +62,6 @@ func RedisTest(c *gin.Context) {
 		fmt.Printf("get redisKey failed, err:%v\n", err)
 		return
 	}
-	
+
 	fmt.Println("redisKey", val)
 }
