@@ -1,0 +1,21 @@
+{
+    "type": "object","properties": {
+        "name"  : { "type": "string"},
+        "remark": { "type": "array", "items": {  "type": "string" }},
+        "apis": { "type": "array", "items": {  "type": "object","properties":{
+            "name"  : { "type": "string"},
+            "summary"  : { "type": "string"},
+            "remark"  : { "type": "array","items": {  "type": "string" }},
+            "isFunctionPoint"  : { "type": "boolean"},
+            "url"  : { "type": "string"},
+            "type"  : { "type": "string"},
+            "requireRole"  : { "type": "array","items": {  "type": "string" }},
+            "req"  : { "type": "object"},
+            "res"  : { "type": "object"}
+        }}}
+    },
+    "required": [
+        "name",
+        "remark"
+    ]
+}

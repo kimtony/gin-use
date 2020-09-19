@@ -1,0 +1,16 @@
+@baseUrl = http://192.168.1.136:8081
+
+###
+GET  {{baseUrl}}/api/health
+
+
+###gorm
+GET  {{baseUrl}}/api/staff
+
+
+###redis
+GET {{baseUrl}}/api/redis/test
+
+
+###token
+GET {{baseUrl}}/api/token/test
