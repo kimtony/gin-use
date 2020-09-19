@@ -12,7 +12,7 @@ var r = gin.Default()
 func InitRouter() *gin.Engine {
 
 	// r.Use(Middleware.Session("xiaojipu"))
-	r.Use(middleware.CORSMiddleware())
+	r.Use(middleware.Validator())
 
 	api := r.Group("/api")
 	{

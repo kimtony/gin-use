@@ -1,8 +1,9 @@
 {
-    "name": "staff_account" ,
+    "name": "car-service" ,
     "remark":[ 
-        "员工、 账户 服务。" ,
-        "主要负责 员工 、 账户 的管理， 登陆， 员工的角色， 权限 等功能"
+        "租车服务",
+        "写个account_id中间，判读该用户是否有权限进行操作",
+        "account_id【中间件】校验token_payload里的account_id"
     ] ,
     "apis" : [
         {
@@ -13,7 +14,7 @@
             ],
             "isFunctionPoint" : false,
             "url" : "/api/health",
-            "type" : "GET",
+            "method" : "GET",
             "requireRole" : [ "*" ],
             "req": {
                 "type": "object",
@@ -30,369 +31,23 @@
             }
         },
         {
-            "name" : "获取图片验证码" ,
+            "name" : "staff" ,
             "summary": "" ,
             "remark": [
-                
+                "获取车主端轮播图"
             ],
             "isFunctionPoint" : false,
-            "url" : "/api/common/captcha",
-            "type" : "GET",
-            "requireRole" : [ "*" ],
+            "url" : "/api/staff",
+            "method" : "GET",
+            "requireRole" : [ "?" ],
             "req": {
-                "type": "object",
-                "props":{
-                    "rand":	{ "type": "string" , "desc": "",    "optional": false }
-                }
                
             },
             "res": {
-                "code" : { "type": "string" , "values" : [ "ok" , "fail" ] }, 
+                "code" : { "type": "string" , "values" : [ "ok" , "system_error" ] }, 
                 "msg": { "type": "string" , "desc": "", "optional": false },
                 "data": {
-                    "type": "string", "desc" : "图片的base64字符串"
-                }
-            }
-        },
-        {
-            "name" : "验证员工的密码" ,
-            "summary": "" ,
-            "remark": [
-                "首先比对 图片验证码是否正确。",
-                "再 比对员工的用户名和密码",                
-                "如果密码正确， 那么拿出用户所属的组织的类型，再根据类型转向到合适的(saas后台、租户后台)后台。"
-            ],
-            "isFunctionPoint" : false,
-            "url" : "/api/staff/verify",
-            "type" : "POST",
-            "requireRole" : [ "*" ],
-            "req": {
-                "type": "object",
-                "props":{
-                 
-                    "username":	{ "type": "string" , "desc": "用户名",    "optional": false },
-                    "password":	{ "type": "string" , "desc": "密码",      "optional": false },
-                    "rand":	    { "type": "string" , "desc": "随机数",    "optional": false },
-                    "captcha":	{ "type": "string" , "desc": "验证码",    "optional": true }
-                }
-               
-            },
-            "res": {
-                "code" : { "type": "string" , "values" : [ "captcha_error"  ,"need_captcha", "verify_faild" , "ok" ] }, 
-                "msg": { "type": "string" , "desc": "", "optional": false },
-                "data": {
-                    "type": "object" , "desc": "code=ok 时，才有这个字段", "optional": false,
-                    "items": {"type":"object","props":{
-                        "staff_token":	{ "type": "string" , "desc": "有效期很短。 { 'staff_id': 'xxx'} ", "optional": false },
-                        "belong_to":	{ "type": "array" , "desc": "所属的组织",    "optional": false , 
-                            "items":{"type":"object","props":{
-                                "org_id":	{ "type": "string" , "desc": "组织id",    "optional": false } ,
-                                "org_name":	{ "type": "string" , "desc": "组织的名称。",    "optional": false },
-                                "org_type":	{ "type": "string" , "desc": "system/tenant",    "optional": false }
-                            }
-                        }
-                        }
-                    }
-                    }
-                }
-            }
-        },
-        {
-            "name" : "换取后台登陆 token" ,
-            "summary": "换取 saas 后台/ 租户后台 的token  " ,
-            "remark": [
-                "注意， 此时要验证 对应 org 的状态是否正常。 如果被禁用了， 不能进入后台",
-                "前端 验证了 员工的密码之后， 会得到员工所属的 组织信息。",
-                "如果是多个，前端需要组装选项列表，提示用户使用哪个身份。",
-                "用户在点其中一个项时，需要先调用本接口，获得实际进入某后台需要 的token",
-                "注意， 本接口不是功能点，即不是在中间件里验证token",
-                "而 需要在controller 里，验证 #验证员工的密码# 接口返回的 staff_token 是否合法。",
-                "不同后台， token 的 payload 要求不一样， 暂定如下， 可能会调整.",
-                "saas token: {'staff_id' : 'xxxx' , 'role_id': ['xx' , 'xx' ] }",
-                "tenatnt token: { 'staff_id' : '' , 'role_id': ['xx' , 'xx' ] ,  'current_activity_id': ['xx'] , 'org_id': 'xx' }",
-                "优化，前5次登陆不需要验证码，登陆失败5次后，第六次需要验证图片验证码"
-            ],
-            "isFunctionPoint" : false,
-            "url" : "/api/common/transform_staff_token",
-            "type" : "GET",
-            "requireRole" : [ "?" ],
-            "req": {
-                "type": "object",
-                "props":{
-                    "org_id":	{ "type": "string" , "desc": "需要进入的org 的id",    "optional": false }
-                }
-              
-            },
-            "res": {
-                "code" : { "type": "string" , "values" : [ "ok"  ,"org_disabled" , "staff_token_invalid" , "not_belong_org" ] }, 
-                "msg": { "type": "string" , "desc": "", "optional": false },
-                "data": {
-                    "type": "string", "desc" : "实际后台需要的token"
-                }
-            }
-        },
-        {
-            "name" : "获取租户信息接口" ,
-            "summary": "" ,
-            "remark": [
-                "postgrest 接口"
-            ],
-            "isFunctionPoint" : true,
-            "url" : "/data/org",
-            "type" : "GET",
-            "requireRole" : [ "platform_admin",  "platform_staff" ],
-            "req": { },
-            "res": { }
-        },
-        {
-            "name" : "获取主键值" ,
-            "summary": "" ,
-            "remark": [
-                "返回一个主键值。"
-            ],
-            "isFunctionPoint" : true,
-            "url" : "/api/common/get_primary_key",
-            "type" : "GET",
-            "requireRole" : [ "?" ],
-            "req": { 
-                "type": "object",
-                "props":{
-                    
-                }
-            },
-            "res": {
-                "code" : { "type": "string" , "values" : [  ] }, 
-                "msg": { "type": "string" , "desc": "", "optional": false },
-                "data": {
-                    "type": "string", "desc" : "新的主键值",
-                    "items":{ }
-                }
-            }
-        },
-        {
-            "name" : "编辑租户信息" ,
-            "summary": "" ,
-            "remark": [
-                "postgrest 接口",
-                "postgrest 的 PUT 方式， 可实现 upsert 功能. 参考下面的链接",
-                "http://postgrest.org/en/v7.0.0/api.html#put"
-            ],
-            "isFunctionPoint" : false,
-            "url" : "/data/org",
-            "type" : "PUT",
-            "requireRole" : [ "platform_admin",  "platform_staff", "tenant_admin"  ],
-            "req": {
-                
-             },
-            "res": { }
-        },
-        {
-            "name" : "生成密码的散列值" ,
-            "summary": "" ,
-            "remark": [
-                "添加用户的时候，需要把明文的密码 计算出 hash 散列值，使用此接口得到散列的字符串，",
-                "后续使用这个字符串作为密码字段的内容"
-            ],
-            "isFunctionPoint" : true,
-            "url" : "/api/common/hash_pwd",
-            "type" : "POST",
-            "requireRole" : [ "platform_admin",  "platform_staff" ,"tenant_admin"],
-            "req": {
-                "type": "object",
-                "props":{
-                    "pwd":	{ "type": "string" , "desc": "密码明文",    "required": true }
-                }
-              
-            },
-            "res": {
-                "code" : { "type": "string" , "values" : [ "ok" ] }, 
-                "msg": { "type": "string" , "desc": "", "optional": false },
-                "data": { "type": "string", "desc" : "密码对应的散列值" }
-            }
-        },
-        {
-            "name" : "编辑员工信息" ,
-            "summary": "" ,
-            "remark": [
-                "postgrest 接口"
-            ],
-            "isFunctionPoint" : true,
-            "url" : "/data/staff",
-            "type" : "PUT",
-            "requireRole" : [ "platform_admin",  "platform_staff","tenant_admin" ],
-            "req": {},
-            "res": {}
-        },
-        {
-            "name" : "获取/查询员工信息" ,
-            "summary": "" ,
-            "remark": [
-                "postgrest 接口"
-            ],
-            "isFunctionPoint" : true,
-            "url" : "/data/staff",
-            "type" : "GET",
-            "requireRole" : [ "?" ],
-            "req": { 
-                "type": "object",
-                "props":{
-                   
-                }
-            },
-            "res": { }
-        },
-        {
-            "name" : "获取/查询组织的员工信息" ,
-            "summary": "" ,
-            "remark": [
-                "postgrest 接口",
-                "create view staff_org_role_view as select * staff_org_role sor join  staff s on sor.staff_id = s.staff_id ",
-                " 调用此 视图时， 必须加上  where sor.org_id = @org_id  "
-            ],
-            "isFunctionPoint" : true,
-            "url" : "/data/staff_org_role_view",
-            "type" : "GET",
-            "requireRole" : [ "?" ],
-            "req": {},
-            "res": {}
-        },
-        {
-            "name" : "增加员工的角色" ,
-            "summary": "" ,
-            "remark": [
-                "postgrest 接口"
-            ],
-            "isFunctionPoint" : true,
-            "url" : "/data/staff_org_role",
-            "type" : "PUT",
-            "requireRole" : [ "platform_admin",  "platform_staff" ,"tenant_admin" ],
-            "req": {},
-            "res": {}
-        },{
-            "name" : "获取SAAS管理员操作日志列表" ,
-            "summary": "" ,
-            "remark": [
-                "postgrest 接口"
-            ],
-            "isFunctionPoint" : true,
-            "url" : "/data/staff_log",
-            "type" : "GET",
-            "requireRole" : [ "platform_admin",  "platform_staff" ],
-            "req": {},
-            "res": {  }
-        },
-        {
-            "name" : "添加操作日志" ,
-            "summary": "" ,
-            "remark": [
-                "postgrest 接口"
-            ],
-            "isFunctionPoint" : true,
-            "url" : "/data/staff_log",
-            "type" : "POST",
-            "requireRole" : [ "?" ],
-            "req": {},
-            "res": {}
-        },
-        {
-            "name" : "根据token 获取员工的信息" ,
-            "summary": "" ,
-            "remark": [
-                "从 token 中拿到 staff_id , 获取此 staff 的信息 返回给前端"
-            ],
-            "isFunctionPoint" : true,
-            "url" : "/api/staff/info",
-            "type" : "GET",
-            "requireRole" : [ "?" ],
-            "req": {
-                "type": "object",
-                "props":{
-                   
-                }
-            },
-            "res": {
-                "code" : { "type": "string" , "values" : [  ] }, 
-                "msg": { "type": "string" , "desc": "", "optional": false },
-                "data": {
-                    "type": "object", "desc" : "",
-                    "items":{
-                        "staff_id":	{ "type": "text" , "desc": "账户id",    "optional": false },
-                        "login_mobile":	{ "type": "text" , "desc": "登陆手机号",    "optional": false },
-                        "staff_name":	{ "type": "text" , "desc": "员工的名称",    "optional": false },
-                        "state":	{ "type": "text" , "desc": "状态",    "optional": false },
-                        "last_login_time":	{ "type": "dateTime" , "desc": "最后登陆时间",    "optional": false },
-                        "login_count":	{ "type": "int" , "desc": "登陆次数",    "optional": false },
-                        "current_org_info":	{ 
-                            "type": "object" , "desc": "当前的组织信息",    "optional": false , "items":{
-                                "org_id":	{ "type": "text" , "desc": "组织id",    "optional": false },
-                                "org_name":	{ "type": "text" , "desc": "组织的名称",    "optional": false },
-                                "role_id":	{ "type": "text" , "desc": "在组织里的角色id",    "optional": false },
-                                "role_name":	{ "type": "text" , "desc": "在组织里的角色名称",    "optional": false }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "name" : "获取下层区域信息" ,
-            "summary": "" ,
-            "remark": [
-                "area 表里，  parent_id 如果为空， 代表是 省/直辖市/自治区 。不传此参数，是获取 第一层的区域  "
-            ],
-            "isFunctionPoint" : true,
-            "url" : "/api/area/get_by_parent_id",
-            "type" : "GET",
-            "requireRole" : [ "?" ],
-            "req": {
-                "type": "object",
-                "props":{
-                    "parent_id":	{ "type": "string" , "desc": "当前的父区域id",    "optional": true , "from": "query"}
-                }
-              
-            },
-            "res": {
-                "code" : { "type": "string" , "values" : [  ] }, 
-                "msg": { "type": "string" , "desc": "", "optional": false },
-                "data": {
-                    "type": "array", "desc" : "",
-                    "items":{
-                        "id":	{ "type": "string" , "desc": "区域的id",    "optional": false },
-                        "name":	{ "type": "string" , "desc": "区域的名称",    "optional": false }
-                    }
-                }
-            }
-        },
-        {
-            "name" : "根据区域id 获取当前区域到第一层的区域信息" ,
-            "summary": "" ,
-            "remark": [
-                "例如：参数的id 是 市桥街道的区域id， 那么返回的数组里， 第一个是 广东省， 第二个是 广州市 ， 第三个是 番禺区 , 第四个是市桥街道",
-                "即 ， 本接口返回的数据的个数， 取决于 当前区域 有多少个父级区域",
-                "select * from area where id in ('44', '4401', '440113','440113007', '440113007207') order by id ;"
-            ],
-            "isFunctionPoint" : true,
-            "url" : "/api/area/get_parent_tree",
-            "type" : "GET",
-            "requireRole" : [ "?" ],
-            "req": {
-                "type": "object",
-                "props":{
-                    "id":	{ "type": "string" , "desc": "区域id",    "optional": false , "from": "query"}
-                }
-               
-            },
-            "res": {
-                "code" : { "type": "string" , "values" : [ "ok" , "area_not_exist"] }, 
-                "msg": { "type": "string" , "desc": "", "optional": false },
-                "data": {
-                    "type": "object", "desc" : "",
-                    "items":{"type":"object","props":{
-                        "id":	{ "type": "string" , "desc": "区域的id",    "optional": false },
-                        "name":	{ "type": "string" , "desc": "区域的名称",    "optional": false }
-                    }
-                       
-                    }
+                    "type": "object", "desc" : ""
                 }
             }
         }
