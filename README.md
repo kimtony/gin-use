@@ -3,52 +3,73 @@
 # 运行说明
 * go mod init 
 * go install
-* ./start.sh
-* 如果找不到这个包go get github.com/silenceper/gowatch
+* ./start.sh  
+* gowatch :go get github.com/silenceper/gowatch  开发使用
 
 
 # go相关资料文档
 * https://www.bookstack.cn/read/topgoer/b0a74e6ce3f8548b.md
 
+## 开发工具 vscode
+* [插件+代码块](https://www.liwenzhou.com/posts/Go/00_go_in_vscode/)
+
+## 接口文档
+* [Swagger](https://github.com/swaggo/gin-swagger) 接口文档生成 
+
 # 后端技术栈
-* 微服务开发
-* 框架：node.js(eggs.js)+go(gin/mirco)
-* 大前端业务中台：node 后端服务：go
-* 服务注册与发现：consul
-* API网关,流量转发统计：kong
-* nginx:http+ssl
-* docker部署
+* 框架：go(gin+restful api + grpc)
 
+## nginx 
+* 反向代理与负载均衡
 
-## hepler
-* 生成uuid   Sonyflake
+## consul 
+* 服务注册与发现
+* key-value 动态配置值
+
+## util
+* 生成uuid [雪花算法](https://juejin.cn/post/6844904035380658190)
 * 验证码
 * 密码加密（hash）验证密码
 * jwt token
 
-## middleware
-* servicedefine校验
+
+## 日志
+* zap日志模块
+* loki+promatil+grafana
+
+## 监控
+* prometheus + grafana
+* [Prometheus](https://github.com/prometheus/client_golang) 
+
+## pprof
+* [pprof](https://github.com/gin-contrib/pprof) 性能剖析 
 
 ## 数据库
 * gorm+pgsql
-* 简单增删改查询都用gorm
-* 业务复杂用原生sql 
-* 可以考虑postgrest接口统一由egg.js转发
 * gorm文档：https://jasperxu.github.io/gorm-zh/advanced.html
 
 
 ## 缓存
-* redis
-* 缓存同步工具
+* [go-redis](https://github.com/go-redis/redis/v7)
+
+## dockerfile
 
 
-## 平滑启动
-* gowatch :go get github.com/silenceper/gowatch
+## devops
+* docker部署
+* gitlab ci cd
 
 
-## sentry 
-* http://192.168.1.10:9000/auth/login/sentry/
-* yuezhi@qq.com   pass@2020
+## git flow
+* git cz模块
+* git remote -v 查看远程仓库地址
+* git branch 查看当前分支
+
+## 微信相关
+* 微信小程序
+* 微信公众号
+* 微信支付
+
 
 
 

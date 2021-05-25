@@ -1,0 +1,121 @@
+stages:
+  - test
+  - build
+  - push
+  - notify_push
+  - deploy
+  - notify
+
+
+
+variables:
+  slu_name: "golang"                                      #项目名
+  app_name: "gin-use"                                     #服务名
+  prod_docker_repo: "docker.isecsp.com"                   #线上docker仓库地址
+  dev_docker_repo: "docker.dev.isecsp.com"                #测试服docker仓库地址
+  prod_docker_user: "machine"                             #docker账号
+  prod_docker_pwd: "pass@2019"                            #docker密码
+  test_server_docker: "tcp://192.168.1.11:2375"           #推送运行的测试服务器
+  port: "9011"                                            #运行服务容器的端口
+  wechat_hook_key: "d5f55737-052f-477b-8e42-abb42e51e075" #企业微信群机器人 用于做消息通知
+  consul_host: "192.168.1.7:8500"                         #cousul地址
+
+run_test:
+  stage: test
+  image: golang
+  script:
+    - go version && go env
+    - go test -short $(go list ./...) | grep -v "no test"
+  only:
+    - master
+    - dev
+    
+
+build_docker_img:
+  stage: build
+  image: docker:stable
+  script:
+    - docker build -t $slu_name/$app_name-$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA .
+  only:
+    - master
+    - dev
+    
+
+push_prod_repo:
+  stage: push
+  image: docker:stable
+  script:
+    - docker login -u $prod_docker_user -p $prod_docker_pwd https://$prod_docker_repo
+    - docker tag $slu_name/$app_name-$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA $prod_docker_repo/$slu_name/$app_name-$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA
+    - docker push $prod_docker_repo/$slu_name/$app_name-$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA
+  only:
+    - master
+
+notify_push_prod_success:
+  stage: notify_push
+  image: curlimages/curl
+  when: on_success
+  allow_failure: true
+  only:
+    - master
+  script:
+    - sh ./ci_wechat_bot.sh push_to_repo   ${slu_name} ${app_name} ${wechat_hook_key} $prod_docker_repo $prod_docker_repo/$slu_name/$app_name-$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA 成功
+
+notify_push_prod_failure:
+  stage: notify_push
+  image: curlimages/curl
+  when: on_failure
+  allow_failure: true
+  only:
+    - master
+  script:
+    - sh ./ci_wechat_bot.sh push_to_repo   ${slu_name} ${app_name} ${wechat_hook_key} $prod_docker_repo $prod_docker_repo/$slu_name/$app_name-$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA 失败
+
+push_dev_repo:
+  stage: push
+  image: docker:stable
+  script:
+    - docker tag $slu_name/$app_name-$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA $dev_docker_repo/$slu_name/$app_name-$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA
+    - docker push $dev_docker_repo/$slu_name/$app_name-$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA
+  only:
+    - dev
+    
+run_in_test:
+  stage: deploy
+  image: docker:stable
+  script:
+    - sh ./ci_run_in_test.sh $slu_name $app_name $CI_COMMIT_REF_NAME $CI_COMMIT_SHORT_SHA $test_server_docker $port $dev_docker_repo ${consul_host}
+  only:
+    - dev
+    
+notify_run_test_success:
+  stage: notify
+  image: curlimages/curl
+  script:
+    - sh ./ci_wechat_bot.sh "notify" ${slu_name} ${app_name} ${wechat_hook_key} 测试-打包-推送-部署-成功 ${GITLAB_USER_NAME} $slu_name/$app_name/${CI_COMMIT_REF_NAME} ${CI_COMMIT_SHORT_SHA} ${CI_COMMIT_DESCRIPTION} ${CI_COMMIT_MESSAGE}
+  when: on_success
+  allow_failure: true
+  only:
+   - master
+   - dev
+   
+notify_run_test_failure:
+  stage: notify
+  image: curlimages/curl
+  script:
+    - sh ./ci_wechat_bot.sh "notify" ${slu_name} ${app_name}  ${wechat_hook_key} 测试-打包-推送-部署-失败 ${GITLAB_USER_NAME} $slu_name/$app_name/${CI_COMMIT_REF_NAME} ${CI_COMMIT_SHORT_SHA} ${CI_COMMIT_DESCRIPTION} ${CI_COMMIT_MESSAGE}
+  when: on_failure
+  allow_failure: true
+  only:
+   - master
+   - dev
+   
+
+
+
+
+
+
+
+
+
