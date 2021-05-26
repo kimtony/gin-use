@@ -4,7 +4,7 @@ import (
 	"gin-use/src/util"
 	"net/http"
 	"time"
-
+	"fmt"
 	"github.com/gin-gonic/gin"
 )
 
@@ -28,9 +28,11 @@ func Health(c *gin.Context) {
 
 	now := time.Now()
 	id := util.GenerateId()
+
+	fmt.Println("id",id)
 	c.JSON(http.StatusOK, map[string]interface{}{
 		"Time": now,
-		"id":   id,
+		"id" : id,
 	})
 
 }

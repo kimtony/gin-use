@@ -14,24 +14,26 @@
   to = ""
   user = ""
 
-[mysql]
+[pg]
 
-  [mysql.base]
+  [pg.base]
     connmaxlifetime = 60
     maxidleconn = 60
     maxopenconn = 10
 
-  [mysql.read]
-    addr = "127.0.0.1:3306"
-    name = "go_gin_api"
-    pass = "123456"
-    user = "root"
+  [pg.read]
+    host = "192.168.1.5"
+    port = "5434"
+    name = "xicheng"
+    pass = "pass_2020"
+    user = "xicheng"
 
-  [mysql.write]
-    addr = "127.0.0.1:3306"
-    name = "go_gin_api"
-    pass = "123456"
-    user = "root"
+  [pg.write]
+    host = "192.168.1.5"
+    port = "5434"
+    name = "xicheng"
+    pass = "pass_2020"
+    user = "xicheng"
 
 [redis]
   addr = "127.0.0.1:6379"

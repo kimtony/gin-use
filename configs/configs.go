@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"gin-use/pkg/env"    //TODO:------检查是否需要换路径
+	"gin-use/src/util/env"  
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
@@ -13,15 +13,17 @@ import (
 var config = new(Config)
 
 type Config struct {
-	MySQL struct {
+	Pg struct {
 		Read struct {
-			Addr string `toml:"addr"`
+			Host string `toml:"host"`
+			Port string `toml:"port"`
 			User string `toml:"user"`
 			Pass string `toml:"pass"`
 			Name string `toml:"name"`
 		} `toml:"read"`
 		Write struct {
-			Addr string `toml:"addr"`
+			Host string `toml:"host"`
+			Port string `toml:"port"`
 			User string `toml:"user"`
 			Pass string `toml:"pass"`
 			Name string `toml:"name"`
@@ -31,7 +33,7 @@ type Config struct {
 			MaxIdleConn     int           `toml:"maxIdleConn"`
 			ConnMaxLifeTime time.Duration `toml:"connMaxLifeTime"`
 		} `toml:"base"`
-	} `toml:"mysql"`
+	} `toml:"pg"`
 
 	Redis struct {
 		Addr         string `toml:"addr"`
@@ -92,7 +94,7 @@ func Get() Config {
 }
 
 func ProjectName() string {
-	return "go-gin-api"
+	return "gin-use"
 }
 
 func ProjectPort() string {

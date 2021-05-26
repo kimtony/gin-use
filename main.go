@@ -1,31 +1,20 @@
 package main
 
 import (
-	// "fmt"
-	"gin-use/src/util/database"
-	// "gin-use/src/util"
-	"os"
-	"strconv"
-	// "encoding/json"
-
-	// "os"
-	// "strconv"
-	"gin-use/src/routes"
-
-	"github.com/gin-gonic/gin"
+	"fmt"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	_ "github.com/joho/godotenv/autoload"
+	"github.com/gin-gonic/gin"
+	"gin-use/src/routes"
+	"gin-use/configs"
 	"gin-use/src/util/logger"
-	"go.uber.org/zap"
+	"gin-use/src/util/env"
 	_ "gin-use/docs" // 千万不要忘了导入把你上一步生成的docs
 )
 
 var r = gin.Default()
 
-func init() {
-    // 初始化日志库
-    log.SetLogs(zap.DebugLevel, log.LOGFORMAT_CONSOLE, "./logs/gin-use.log")
-}
+
 
 
 // @title swagger 接口文档
@@ -43,21 +32,38 @@ func init() {
 // @BasePath
 func main() {
 
-  
-	//是否开启数据库调试
-	enableDBLogMode, _ := strconv.ParseBool(os.Getenv("ENABLE_DB_LOGMODE"))
-	database.DB.LogMode(enableDBLogMode)
+	// 初始化 logger
+	loggers, err := logger.NewJSONLogger(
+		logger.WithField("domain", fmt.Sprintf("%s[%s]", configs.ProjectName(), env.Active().Value())),
+		logger.WithTimeLayout("2006-01-02 15:04:05"),
+		logger.WithFileP(configs.ProjectLogFile()),
+	)
+	if err != nil {
+		panic(err)
+	}
+	defer loggers.Sync()
 
-	//初始化路由
+	// 初始化 HTTP 服务
 	r := routes.InitRouter()
 
     if err := r.Run(":8081"); err != nil {
-        zap.L().Fatal("HTTP Server启动失败", zap.Error(err))
+        fmt.Println("HTTP Server启动失败")
     }
+
+	//是否开启数据库调试
+	// enableDBLogMode, _ := strconv.ParseBool(os.Getenv("ENABLE_DB_LOGMODE"))
+	// db.DB.LogMode(enableDBLogMode)
+
+	//初始化路由
+	// r := routes.InitRouter()
+
+    // if err := r.Run(":8081"); err != nil {
+    //     zap.L().Fatal("HTTP Server启动失败", zap.Error(err))
+    // }
 
 	//sentry  util.Sentry()
 	
 
-	defer database.DB.Close()
+
 
 }

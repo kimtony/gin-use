@@ -34,7 +34,7 @@ func GenToken(inPayload map[string]interface{}) (string, error) {
 		inPayload, // 自定义字段
 		jwt.StandardClaims{
 			ExpiresAt: time.Now().Add(TokenExpireDuration).Unix(), // 过期时间
-			Issuer:    "yuezhi",                                   // 签发人
+			Issuer:    "linkai",                                   // 签发人
 		},
 	}
 	// 使用指定的签名方法创建签名对象
