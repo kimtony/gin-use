@@ -1,27 +1,19 @@
 package routes
 
 import (
-	"gin-use/src/controller"
 	"gin-use/src/middleware"
-	
+	"gin-use/src/controller"
+
+	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
-
-	"github.com/gin-contrib/zap"
-    "github.com/gin-gonic/gin"
-    "go.uber.org/zap"
-    "time"
 )
 
 var r = gin.Default()
 
 func InitRouter() *gin.Engine {
-    engine := gin.New()
-    // 使用zap日志库
-    engine.Use(ginzap.Ginzap(zap.L(), time.RFC3339, true))
-    engine.Use(ginzap.RecoveryWithZap(zap.L(), true))
-	// r.Use(Middleware.Session("xiaojipu"))
-	// r.Use(middleware.Validator())
+	
+
 	r.Use(middleware.CORSMiddleware())
 
 	api := r.Group("/api")

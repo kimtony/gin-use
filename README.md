@@ -66,6 +66,7 @@
 * git branch 查看当前分支
 
 ## 微信相关
+* [微信开发](https://silenceper.com/wechat/officialaccount/start.html)
 * 微信小程序
 * 微信公众号
 * 微信支付

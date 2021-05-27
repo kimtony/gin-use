@@ -1,10 +1,11 @@
 package controller
 
 import (
+	"gin-use/src/global"
 	"gin-use/src/util"
 	"net/http"
 	"time"
-	"fmt"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -14,25 +15,24 @@ type returnStruct struct {
 	Data    interface{} `json:"data"`
 }
 
-//健康检查
+// Health 健康检查
+// @Summary 健康检查接口
+// @Description 服务是否启动正常检查
+// @Tags 监测服务
+// @Accept application/json
+// @Produce application/json
+// @Param id path int true "ID"
+// @Success 200
+// @Router /api/health [get]
 func Health(c *gin.Context) {
-
-	// 月份 1,01,Jan,January
-	// 日　 2,02,_2
-	// 时　 3,03,15,PM,pm,AM,am
-	// 分　 4,04
-	// 秒　 5,05
-	// 年　 06,2006
-	// 时区 -07,-0700,Z0700,Z07:00,-07:00,MST
-	// 周几 Mon,Monday
 
 	now := time.Now()
 	id := util.GenerateId()
+	global.Logger.Info("嘿，我能调用了")
 
-	fmt.Println("id",id)
 	c.JSON(http.StatusOK, map[string]interface{}{
 		"Time": now,
-		"id" : id,
+		"id":   id,
 	})
 
 }

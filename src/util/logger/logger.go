@@ -193,6 +193,7 @@ func NewJSONLogger(opts ...Option) (*zap.Logger, error) {
 	for key, value := range opt.fields {
 		logger = logger.WithOptions(zap.Fields(zapcore.Field{Key: key, Type: zapcore.StringType, String: value}))
 	}
+	zap.ReplaceGlobals(logger)
 	return logger, nil
 }
 

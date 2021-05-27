@@ -1,0 +1,33 @@
+{"level":"info","time":"2021-05-27 15:16:38","caller":"gin-use/main.go:43","msg":"傻逼日志不能调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:16:39","caller":"gin-use/main.go:43","msg":"傻逼日志不能调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:16:40","caller":"gin-use/main.go:43","msg":"傻逼日志不能调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:20:52","caller":"gin-use/main.go:43","msg":"傻逼日志不能调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:20:53","caller":"gin-use/main.go:43","msg":"傻逼日志不能调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:21:30","caller":"gin-use/main.go:43","msg":"傻逼日志不能调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:22:18","caller":"gin-use/main.go:43","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:24:24","caller":"gin-use/main.go:43","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:26:11","caller":"gin-use/main.go:43","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:45:40","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:45:46","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:45:47","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:46:42","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:46:43","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:49:01","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:49:05","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:49:07","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:49:22","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:49:24","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:50:07","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:50:21","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:50:23","caller":"controller/base.go:23","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 15:51:53","caller":"gin-use/main.go:47","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
+{"level":"error","time":"2021-05-27 16:36:06","caller":"gin-use/main.go:59","msg":"new db err","domain":"gin-use[fat]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:57\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
+{"level":"error","time":"2021-05-27 16:36:13","caller":"gin-use/main.go:59","msg":"new db err","domain":"gin-use[fat]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:57\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
+{"level":"error","time":"2021-05-27 16:36:20","caller":"gin-use/main.go:59","msg":"new db err","domain":"gin-use[fat]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:57\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
+{"level":"error","time":"2021-05-27 16:36:22","caller":"gin-use/main.go:59","msg":"new db err","domain":"gin-use[fat]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:57\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
+{"level":"info","time":"2021-05-27 17:08:29","caller":"controller/base.go:30","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 17:09:16","caller":"controller/base.go:30","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 17:09:55","caller":"controller/base.go:30","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 17:41:04","caller":"controller/base.go:31","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 17:41:30","caller":"controller/base.go:31","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
+{"level":"info","time":"2021-05-27 17:44:27","caller":"controller/base.go:31","msg":"嘿，我能调用了","domain":"gin-use[fat]"}

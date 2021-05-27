@@ -1,16 +1,29 @@
-basePath: /v2
-host: petstore.swagger.io
+host: 192.168.1.163:8081
 info:
-  contact:
-    email: support@swagger.io
-    name: API Support
-    url: http://www.swagger.io/support
-  description: This is a sample server Petstore server.
+  contact: {}
   license:
-    name: Apache 2.0
-    url: http://www.apache.org/licenses/LICENSE-2.0.html
-  termsOfService: http://swagger.io/terms/
-  title: Swagger Example API
-  version: "1.0"
-paths: {}
+    name: MIT
+    url: https://github.com/xinliangnote/go-gin-api/blob/master/LICENSE
+  title: swagger 接口文档
+  version: "2.0"
+paths:
+  /api/health:
+    get:
+      consumes:
+      - application/json
+      description: 服务是否启动正常检查
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: 健康检查接口
+      tags:
+      - 监测服务
 swagger: "2.0"
