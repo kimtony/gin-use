@@ -1,10 +1,13 @@
 package routes
 
 import (
-	"gin-use/src/middleware"
+	"gin-use/configs"
 	"gin-use/src/controller"
+	"gin-use/src/middleware"
 
+	"github.com/gin-contrib/pprof"
 	"github.com/gin-gonic/gin"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
@@ -12,13 +15,11 @@ import (
 var r = gin.Default()
 
 func InitRouter() *gin.Engine {
-	
 
 	r.Use(middleware.CORSMiddleware())
 
 	api := r.Group("/api")
 	{
-
 		//健康检查
 		api.GET("/health", controller.Health)
 
@@ -30,12 +31,17 @@ func InitRouter() *gin.Engine {
 
 		//token
 		// api.GET("/token/test", controller.Token)
-
-		//文档
-		url := ginSwagger.URL("http://192.168.1.163:8081/swagger/doc.json")
-		r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, url))
-
 	}
+
+	//pprof
+	pprof.Register(r, "/sys/pprof")
+
+	//prometheus
+	r.GET("/sys/metrics", gin.WrapH(promhttp.Handler()))
+
+	//swagger接口文档
+	url := ginSwagger.URL(configs.SwaggerUrl())
+	r.GET("/sys/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, url))
 
 	return r
 }

@@ -53,14 +53,13 @@ func main() {
 	//初始化缓存服务
 	cacheRepo, err := cache.New()
 	if err != nil {
-		loggers.Error("new db err", zap.Error(err))
+		loggers.Error("new cahe err", zap.Error(err))
 	}
 	global.Cache = cacheRepo
 
 	// 初始化 HTTP 服务
 	r := routes.InitRouter()
-
-	if err := r.Run(":8081"); err != nil {
+	if err := r.Run(configs.ProjectPort()); err != nil {
 		fmt.Println("HTTP Server启动失败")
 	}
 

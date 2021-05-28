@@ -2,14 +2,16 @@ package configs
 
 import (
 	"fmt"
+	"strings"
 	"time"
 
-	"gin-use/src/util/env"  
+	"gin-use/src/util/env"
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 )
 
+var build strings.Builder
 var config = new(Config)
 
 type Config struct {
@@ -89,18 +91,34 @@ func init() {
 	})
 }
 
+//获取配置信息
 func Get() Config {
 	return *config
 }
 
+//获取项目名字
 func ProjectName() string {
 	return "gin-use"
 }
 
-func ProjectPort() string {
-	return ":9999"
+//获取主机ip
+func ProjectHost() string {
+	return "http://192.168.1.163"
 }
 
+//获取端口
+func ProjectPort() string {
+	return ":8081"
+}
+
+//接口文档
+func SwaggerUrl() string {
+	
+	build.WriteString(ProjectHost())
+	build.WriteString(ProjectPort())
+	build.WriteString("/sys/swagger/doc.json")
+	return build.String()
+}
 func ProjectLogFile() string {
 	return fmt.Sprintf("./logs/%s-access.log", ProjectName())
 }

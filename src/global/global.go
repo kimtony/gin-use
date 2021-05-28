@@ -4,11 +4,8 @@ import (
 	"gin-use/src/util/cache"
 	"gin-use/src/util/db"
 
-	"go.uber.org/zap"
-
-	// "gin-use/configs"
-
 	"github.com/spf13/viper"
+	"go.uber.org/zap"
 )
 
 var (

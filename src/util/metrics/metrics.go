@@ -6,8 +6,8 @@ import (
 )
 
 const (
-	namespace = "xinliangnote"
-	subsystem = "go_gin_api"
+	namespace = "link"
+	subsystem = "gin-use"
 )
 
 // metricsRequestsTotal metrics for request total 计数器（Counter）

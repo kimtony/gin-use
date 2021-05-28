@@ -2,7 +2,7 @@ package controller
 
 import (
 	"gin-use/src/global"
-	"gin-use/src/util"
+	"gin-use/src/util/snowflake"
 	"net/http"
 	"time"
 
@@ -27,12 +27,15 @@ type returnStruct struct {
 func Health(c *gin.Context) {
 
 	now := time.Now()
-	id := util.GenerateId()
+	id := snowflake.GenerateId()
+	workerid, datacenterid := snowflake.GetDeviceID(id)
 	global.Logger.Info("嘿，我能调用了")
 
 	c.JSON(http.StatusOK, map[string]interface{}{
-		"Time": now,
-		"id":   id,
+		"Time":         now,
+		"id":           id,
+		"datacenterid": datacenterid,
+		"workerid":     workerid,
 	})
 
 }

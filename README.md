@@ -54,6 +54,12 @@
 
 ## dockerfile
 
+## protobuf序列化
+```
+go get  -v -u github.com/golang/protobuf/proto
+go get  -v -u github.com/golang/protobuf/protoc-gen-go
+
+```
 
 ## devops
 * docker部署

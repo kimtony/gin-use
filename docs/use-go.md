@@ -2,17 +2,7 @@
 
 ## 场景: 构造一个对象参数
 ```
-##node.js   直接写出来就行
-
-const inpayload = {
-    accountId : "123465",
-    name : "lk",
-    age : 18
-}
-
-##go写法 目前使用map(集合),可能还有别的写法   interface{}的作用就是你的对象值可以为自定义类型
 ##map[string]string  如果是这样定义则value都为string
-    
 inpayload := map[string]interface{}{
     "account": "3345472145214",
     "name":    "lk",
@@ -20,11 +10,16 @@ inpayload := map[string]interface{}{
 }
 
 ```
-## protobuf
-```
-go get  -v -u github.com/golang/protobuf/proto
-go get  -v -u github.com/golang/protobuf/protoc-gen-go
 
+## 字符串拼接
+```
+### 性能最好,官方建议
+s1 := "字符串"
+s2 := "拼接"
+var build strings.Builder
+build.WriteString(s1)
+build.WriteString(s2)
+s3 := build.String()
 ```
 
 
