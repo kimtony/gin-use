@@ -2,79 +2,81 @@ package configs
 
 import (
 	"fmt"
+	"gin-use/src/util/env"
 	"strings"
 	"time"
 
-	"gin-use/src/util/env"
-
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
+	_ "github.com/spf13/viper/remote"
 )
 
 var build strings.Builder
 var config = new(Config)
 
 type Config struct {
+	//数据库配置
 	Pg struct {
 		Read struct {
-			Host string `toml:"host"`
-			Port string `toml:"port"`
-			User string `toml:"user"`
-			Pass string `toml:"pass"`
-			Name string `toml:"name"`
-		} `toml:"read"`
+			Host string `json:"host"`
+			Port string `json:"port"`
+			User string `json:"user"`
+			Pass string `json:"pass"`
+			Name string `json:"name"`
+		} `json:"read"`
 		Write struct {
-			Host string `toml:"host"`
-			Port string `toml:"port"`
-			User string `toml:"user"`
-			Pass string `toml:"pass"`
-			Name string `toml:"name"`
-		} `toml:"write"`
+			Host string `json:"host"`
+			Port string `json:"port"`
+			User string `json:"user"`
+			Pass string `json:"pass"`
+			Name string `json:"name"`
+		} `json:"write"`
 		Base struct {
-			MaxOpenConn     int           `toml:"maxOpenConn"`
-			MaxIdleConn     int           `toml:"maxIdleConn"`
-			ConnMaxLifeTime time.Duration `toml:"connMaxLifeTime"`
-		} `toml:"base"`
-	} `toml:"pg"`
+			MaxOpenConn     int           `json:"maxOpenConn"`
+			MaxIdleConn     int           `json:"maxIdleConn"`
+			ConnMaxLifeTime time.Duration `json:"connMaxLifeTime"`
+		} `json:"base"`
+	} `json:"pg"`
 
+	//redis缓存
 	Redis struct {
-		Addr         string `toml:"addr"`
-		Pass         string `toml:"pass"`
-		Db           int    `toml:"db"`
-		MaxRetries   int    `toml:"maxRetries"`
-		PoolSize     int    `toml:"poolSize"`
-		MinIdleConns int    `toml:"minIdleConns"`
-	} `toml:"redis"`
-
+		Addr         string `json:"addr"`
+		Pass         string `json:"pass"`
+		Db           int    `json:"db"`
+		MaxRetries   int    `json:"maxRetries"`
+		PoolSize     int    `json:"poolSize"`
+		MinIdleConns int    `json:"minIdleConns"`
+	} `json:"redis"`
+	
+	
 	Mail struct {
-		Host string `toml:"host"`
-		Port int    `toml:"port"`
-		User string `toml:"user"`
-		Pass string `toml:"pass"`
-		To   string `toml:"to"`
-	} `toml:"mail"`
+		Host string `json:"host"`
+		Port int    `json:"port"`
+		User string `json:"user"`
+		Pass string `json:"pass"`
+		To   string `json:"to"`
+	} `json:"mail"`
 
 	JWT struct {
-		Secret         string        `toml:"secret"`
-		ExpireDuration time.Duration `toml:"expireDuration"`
-	} `toml:"jwt"`
+		Secret         string        `json:"secret"`
+		ExpireDuration time.Duration `json:"expireDuration"`
+	} `json:"jwt"`
 
 	URLToken struct {
-		Secret         string        `toml:"secret"`
-		ExpireDuration time.Duration `toml:"expireDuration"`
-	} `toml:"urlToken"`
+		Secret         string        `json:"secret"`
+		ExpireDuration time.Duration `json:"expireDuration"`
+	} `json:"urlToken"`
 
 	HashIds struct {
-		Secret string `toml:"secret"`
-		Length int    `toml:"length"`
-	} `toml:"hashids"`
+		Secret string `json:"secret"`
+		Length int    `json:"length"`
+	} `json:"hashids"`
 }
 
 func init() {
 	viper.SetConfigName(env.Active().Value() + "_configs")
-	viper.SetConfigType("toml")
+	viper.SetConfigType("json")
 	viper.AddConfigPath("./configs")
-
 	if err := viper.ReadInConfig(); err != nil {
 		panic(err)
 	}
@@ -82,13 +84,40 @@ func init() {
 	if err := viper.Unmarshal(config); err != nil {
 		panic(err)
 	}
-
+	// getConsul()
 	viper.WatchConfig()
 	viper.OnConfigChange(func(e fsnotify.Event) {
 		if err := viper.Unmarshal(config); err != nil {
 			panic(err)
 		}
 	})
+}
+
+func getConsul() {
+	var v = viper.New()
+
+	v.AddRemoteProvider("consul", "http://192.168.1.7:8500", "test/test_config")
+
+	v.SetConfigType("json") // 因为不知道格式，所以需要指定，支持的格式有"json"、"json"、"yaml"、"yml"、"properties"、"props"、"prop"
+
+	if err := v.ReadRemoteConfig(); err != nil {
+		fmt.Println("获取配置文件报错", err)
+		return
+	}
+
+	fmt.Println("获取配置文件的port", v.GetInt("port"))
+	fmt.Println("获取配置文件的mysql.url", v.GetString(`mysql.url`))
+	fmt.Println("获取配置文件的mysql.username", v.GetString(`mysql.username`))
+	fmt.Println("获取配置文件的mysql.password", v.GetString(`mysql.password`))
+	fmt.Println("获取配置文件的redis", v.GetStringSlice("redis"))
+	fmt.Println("获取配置文件的smtp", v.GetStringMap("smtp"))
+
+	// 从远程读取配置
+	// err := v.ReadRemoteConfig()
+
+	// // 解析配置到runtime_conf中
+	// runtime_viper.Unmarshal(&runtime_conf)
+
 }
 
 //获取配置信息
@@ -113,7 +142,7 @@ func ProjectPort() string {
 
 //接口文档
 func SwaggerUrl() string {
-	
+
 	build.WriteString(ProjectHost())
 	build.WriteString(ProjectPort())
 	build.WriteString("/sys/swagger/doc.json")

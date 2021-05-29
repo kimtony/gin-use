@@ -10,6 +10,7 @@ ENV GO111MODULE=on \
 
 RUN go mod init \
     && go mod tidy \
+    && go mod edit -replace google.golang.org/grpc = google.golang.org/grpc v1.28.0 \
     && go build -ldflags="-s -w" -o /app/gin-use .
 
 FROM alpine
@@ -18,7 +19,7 @@ FROM alpine
         GIN_MODE=release 
     # 设置工作目录
     WORKDIR /data/app
-    # 复制生成的可执行命令和一些配置文件
+    # 复制生成的可执行命令
     COPY --from=build /app/gin-use .
 
 EXPOSE 8081

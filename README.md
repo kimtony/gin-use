@@ -24,7 +24,7 @@
 
 ## consul 
 * 服务注册与发现
-* key-value 动态配置值
+* consul的key-value+viper 实现 动态配置值
 
 ## util
 * 生成uuid [雪花算法](https://juejin.cn/post/6844904035380658190)

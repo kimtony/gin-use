@@ -10,7 +10,6 @@ var (
 	active Environment
 	dev    Environment = &environment{value: "dev"}
 	fat    Environment = &environment{value: "fat"}
-	uat    Environment = &environment{value: "uat"}
 	pro    Environment = &environment{value: "pro"}
 )
 
@@ -21,7 +20,6 @@ type Environment interface {
 	Value() string
 	IsDev() bool
 	IsFat() bool
-	IsUat() bool
 	IsPro() bool
 	t()
 }
@@ -42,10 +40,6 @@ func (e *environment) IsFat() bool {
 	return e.value == "fat"
 }
 
-func (e *environment) IsUat() bool {
-	return e.value == "uat"
-}
-
 func (e *environment) IsPro() bool {
 	return e.value == "pro"
 }
@@ -53,7 +47,7 @@ func (e *environment) IsPro() bool {
 func (e *environment) t() {}
 
 func init() {
-	env := flag.String("env", "", "请输入运行环境:\n dev:开发环境\n fat:测试环境\n uat:预上线环境\n pro:正式环境\n")
+	env := flag.String("env", "", "请输入运行环境:\n dev:开发环境\n fat:测试环境\n pro:正式环境\n")
 	flag.Parse()
 
 	switch strings.ToLower(strings.TrimSpace(*env)) {
@@ -61,12 +55,10 @@ func init() {
 		active = dev
 	case "fat":
 		active = fat
-	case "uat":
-		active = uat
 	case "pro":
 		active = pro
 	default:
-		active = fat
+		active = dev
 		fmt.Println("Warning: '-env' cannot be found, or it is illegal. The default 'fat' will be used.")
 	}
 }

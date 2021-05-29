@@ -1,4 +1,7 @@
-# 在使用的过程对比node和go的一些写法
+> go相关使用
+## [Golang 调度器 GMP 原理与调度全分析](https://learnku.com/articles/41728)
+## go并发
+* goroutine、channel、mutex、syncmap
 
 ## 场景: 构造一个对象参数
 ```

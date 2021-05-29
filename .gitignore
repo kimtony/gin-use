@@ -5,3 +5,4 @@ main
 nohup.out
 go.sum
 go.mod
+logs/
