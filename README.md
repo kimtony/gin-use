@@ -77,6 +77,9 @@ go get  -v -u github.com/golang/protobuf/protoc-gen-go
 * 微信公众号
 * 微信支付
 
+## 代码安全
+* [go代码安全](https://github.com/Tencent/secguide/blob/main/Go%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97.md)
+
 
 
 

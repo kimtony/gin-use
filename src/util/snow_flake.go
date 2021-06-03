@@ -9,14 +9,13 @@ var node *snowflake.Node
 
 
 // GenerateSnowflake generate Twitter Snowflake ID
-func GenerateId() int64 {
+func GenerateId() string {
 
 	node, err := snowflake.NewNode(1)
 	if err != nil {
 		fmt.Println(err)
 	}
-	id := node.Generate().Int64()
-
+	id := fmt.Sprintf("%s",node.Generate())
 	return id
 }
 

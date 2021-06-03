@@ -11,13 +11,13 @@ stages:
 variables:
   slu_name: "golang"                                      #项目名
   app_name: "gin-use"                                     #服务名
-  prod_docker_repo: "docker.isecsp.com"                   #线上docker仓库地址
-  dev_docker_repo: "docker.dev.isecsp.com"                #测试服docker仓库地址
+  prod_docker_repo: ""                                    #线上docker仓库地址
+  dev_docker_repo: ""                                     #测试服docker仓库地址
   prod_docker_user: "machine"                             #docker账号
   prod_docker_pwd: "pass@2019"                            #docker密码
   test_server_docker: "tcp://192.168.1.11:2375"           #推送运行的测试服务器
   port: "9011"                                            #运行服务容器的端口
-  wechat_hook_key: "d5f55737-052f-477b-8e42-abb42e51e075" #企业微信群机器人 用于做消息通知
+  wechat_hook_key: " "                                    #企业微信群机器人 用于做消息通知
   consul_host: "192.168.1.7:8500"                         #cousul地址
 
 run_test:

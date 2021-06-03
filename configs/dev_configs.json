@@ -1,51 +1,57 @@
 {
-  "hashids":{
-    "length" : 12,
-    "secret" : "6ab6122836cfef95f8db"
+  "discover": {
+    "host": "127.0.0.1",
+    "instanceid": "xicheng-account-localhost",
+    "port": 8500,
+    "servicename": "xicheng-account",
+    "weight": 10
   },
-  "jwt":{
-    "expireduration" : 24,
-    "secret" : "i1ydX9RtHyuJTrw7frcu"
+  "hashids": {
+    "length": 12,
+    "secret": "6ab6122836cfef95f8db"
   },
-  "mail":{
-    "host" : "smtp.163.com",
-    "pass" : "",
-    "port" : 465,
-    "to" : "",
-    "user" : ""
+  "jwt": {
+    "expireduration": 24,
+    "secret": "i1ydX9RtHyuJTrw7frcu"
   },
-  "pg":{
-    "base" : {
-      "connmaxlifetime":60,
-      "maxidleconn":60,
-      "maxopenconn":10
+  "mail": {
+    "host": "smtp.163.com",
+    "pass": "123456",
+    "port": 465,
+    "to": "",
+    "user": "lk"
+  },
+  "pg": {
+    "base": {
+      "connmaxlifetime": 60,
+      "maxidleconn": 60,
+      "maxopenconn": 10
     },
-    "read" : {
-      "host" : "192.168.1.5",
-      "port" : "5434",
-      "name" : "xicheng",
-      "pass" : "pass_2020",
-      "user" : "xicheng"
+    "read": {
+      "host": "192.168.1.5",
+      "name": "xicheng",
+      "pass": "pass_2020",
+      "port": "5434",
+      "user": "xicheng"
     },
-    "write" : {
-      "host" : "192.168.1.5",
-      "port" : "5434",
-      "name" : "xicheng",
-      "pass" : "pass_2020",
-      "user" : "xicheng"
+    "write": {
+      "host": "192.168.1.5",
+      "name": "xicheng",
+      "pass": "pass_2020",
+      "port": "5434",
+      "user": "xicheng"
     }
   },
-  "redis":{
-    "addr" : "192.168.1.6:6379",
-    "db" : "10",
-    "maxretries" : 3,
-    "minidleconns" : 5,
-    "pass" : "redis_pass_2020",
-    "poolsize" : 10
+  "redis": {
+    "addr": "192.168.1.6:6379",
+    "db": "10",
+    "maxretries": 3,
+    "minidleconns": 5,
+    "pass": "redis_pass_2020",
+    "poolsize": 10
   },
-  "urltoken":{
-    "expireduration" : 10,
-    "secret" : "i1ydX9RtHyuJTrw7frcu"
+  "urltoken": {
+    "expireduration": 10,
+    "secret": "i1ydX9RtHyuJTrw7frcu"
   }
 }
-

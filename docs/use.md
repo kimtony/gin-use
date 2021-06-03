@@ -14,3 +14,14 @@
 * docker build -t docker.dev.isecsp.com/xicheng/car-test .
 * docker push docker.dev.isecsp.com/xicheng/car-test
 
+
+## viper配置
+```
+可读取多个配置文件
+x := viper.New()
+y := viper.New()
+ 
+x.SetDefault("ContentDir", "content")
+y.SetDefault("ContentDir", "foobar")
+```
+

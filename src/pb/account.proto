@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package pb;
+
+service AccountService{
+    rpc Check(AccountRequest) returns (AccountResponse){}
+}
+
+message AccountRequest {
+
+}
+
+message AccountResponse {
+
+}
