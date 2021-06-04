@@ -8,21 +8,19 @@ import (
 	"gin-use/src/global"
 	"gin-use/src/routes"
 	"gin-use/src/util/cache"
+	"gin-use/src/util/consul"
 	"gin-use/src/util/db"
 	"gin-use/src/util/env"
 	"gin-use/src/util/logger"
-	"gin-use/src/client"
-	"gin-use/src/pb"
-
-	// "time"
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload"
 	"go.uber.org/zap"
-	// "google.golang.org/grpc"
 )
 
-var r = gin.Default()
+var (
+	r = gin.Default()
+)
 
 // @title swagger 接口文档
 // @version 2.0
@@ -35,9 +33,10 @@ var r = gin.Default()
 // @host 192.168.1.163:8081
 // @BasePath
 func main() {
+
 	// 初始化 logger
 	loggers, err := logger.NewJSONLogger(
-		logger.WithField("domain", fmt.Sprintf("%s[%s]", configs.ProjectName(), env.Active().Value())),
+		logger.WithField("domain", fmt.Sprintf("%s:%s", configs.ProjectName(), env.Active().Value())),
 		logger.WithTimeLayout("2006-01-02 15:04:05"),
 		logger.WithFileP(configs.ProjectLogFile()),
 	)
@@ -61,12 +60,14 @@ func main() {
 	}
 	global.Cache = cacheRepo
 
+	//consul服务注册与发现
+	consul.Register()
+	consul.CheckHeath()
+
 	// 初始化 HTTP 服务
 	r := routes.InitRouter()
-	if err := r.Run(fmt.Sprintf(":%d",configs.ProjectPort())); err != nil {
+	if err := r.Run(fmt.Sprintf(":%s", configs.ProjectPort())); err != nil {
 		fmt.Println("HTTP Server启动失败")
 	}
 
 }
-
-

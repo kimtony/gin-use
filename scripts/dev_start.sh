@@ -11,7 +11,8 @@ export REDIS_PORT=6379
 export REDIS_PASS=redis_pass_2020
 
 # consul  
-export CONSUL_ADDR=http://192.168.1.7:8500
+export CONSUL_HOST=192.168.1.7
+export CONSUL_PORT=8500
 export CONSUL_CONFIG_PATH=test/test_config
 
 #dbdebug

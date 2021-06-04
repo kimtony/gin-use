@@ -5,15 +5,12 @@ import (
 	"gin-use/src/util/env"
 	"net"
 	"os"
-	"strings"
 	"time"
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 	_ "github.com/spf13/viper/remote"
 )
-
-
 
 var config = new(Config)
 
@@ -51,15 +48,6 @@ type Config struct {
 		MinIdleConns int    `json:"minIdleConns"`
 	} `json:"redis"`
 
-	//discover
-	Discover struct {
-		Host         string `json:"host"`
-		Port         string	`json:"port"`
-		InstanceId   string `json:"instanceId"`
-		ServiceName  string `json:"serviceName"`
-		Weight     	 int    `json:"weight"`
-	} `json:"discover"`
-
 	Mail struct {
 		Host string `json:"host"`
 		Port int    `json:"port"`
@@ -89,7 +77,7 @@ func init() {
 	var viper = viper.New()
 
 	//config_path 路径为 consul下key value的文件路径
-	viper.AddRemoteProvider("consul", os.Getenv("CONSUL_ADDR"), os.Getenv("CONSUL_CONFIG_PATH"))
+	viper.AddRemoteProvider("consul", ConsulAddr(), os.Getenv("CONSUL_CONFIG_PATH"))
 
 	//指定读取json文件
 	viper.SetConfigType("json")
@@ -145,11 +133,7 @@ func ProjectName() string {
 
 //获取主机ip
 func ProjectHost() string {
-	var build strings.Builder
-
-	build.WriteString("http://")
-	build.WriteString(GetLocalIp()[0])
-	return build.String()
+	return fmt.Sprintf("http://%s", GetLocalIp()[0])
 }
 
 //获取端口
@@ -157,13 +141,14 @@ func ProjectPort() string {
 	return "8081"
 }
 
+//获取consul地址
+func ConsulAddr() string {
+	return fmt.Sprintf("http://%s:%s", os.Getenv("CONSUL_HOST"), os.Getenv("CONSUL_PORT"))
+}
+
 //接口文档
 func SwaggerUrl() string {
-	var build strings.Builder
-	build.WriteString(ProjectHost())
-	build.WriteString(ProjectPort())
-	build.WriteString("/sys/swagger/doc.json")
-	return build.String()
+	return fmt.Sprintf("%s:%s%s", ProjectHost(), ProjectPort(), "/sys/swagger/doc.json")
 }
 
 //日志文件目录

@@ -1,13 +1,8 @@
 # gin-demo
 
-# 运行说明
-* go mod init 
-* go install
-* ./start.sh  
-* gowatch :go get github.com/silenceper/gowatch  开发使用
+## [使用运行](./docs/use.md)
 
-
-# go相关资料文档
+## go相关资料文档
 * https://www.bookstack.cn/read/topgoer/b0a74e6ce3f8548b.md
 
 ## 开发工具 vscode
@@ -16,22 +11,17 @@
 ## 接口文档
 * [Swagger](https://github.com/swaggo/gin-swagger) 接口文档生成 
 
-# 后端技术栈
-* 框架：go(gin+restful api + grpc)
+## 后端技术栈
+* 框架：go-gin (api + grpc)
 
-## nginx 
+## nginx | trafix 
 * 反向代理与负载均衡
+* api网关
 
 ## consul 
 * 服务注册与发现
+* 服务健康检查
 * consul的key-value+viper 实现 动态配置值
-
-## util
-* 生成uuid [雪花算法](https://juejin.cn/post/6844904035380658190)
-* 验证码
-* 密码加密（hash）验证密码
-* jwt token
-
 
 ## 日志
 * zap日志模块
@@ -48,17 +38,24 @@
 * gorm+pgsql
 * gorm文档：https://jasperxu.github.io/gorm-zh/advanced.html
 
-
 ## 缓存
 * [go-redis](https://github.com/go-redis/redis/v7)
 
+
+## util
+* 生成uuid [雪花算法](https://juejin.cn/post/6844904035380658190)
+* 验证码
+* 密码加密（hash）验证密码
+* jwt token
+
 ## dockerfile
+* 多层缓存构建
+* 减少镜像体积
 
 ## protobuf序列化
 ```
 go get  -v -u github.com/golang/protobuf/proto
 go get  -v -u github.com/golang/protobuf/protoc-gen-go
-
 ```
 
 ## devops

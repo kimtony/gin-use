@@ -1,17 +1,17 @@
 FROM golang:1.15.5-alpine AS build
-WORKDIR $GOPATH/src/gin-use
-COPY . ./
-ENV GO111MODULE=on \
-    CGO_ENABLED=0 \
+ENV CGO_ENABLED=0 \
     GOOS=linux \
     GOARCH=amd64 \
     GOPROXY=https://goproxy.cn,direct 
 
+WORKDIR /build/gin-use
 
-RUN go mod init \
-    && go mod tidy \
-    && go mod edit -replace google.golang.org/grpc = google.golang.org/grpc v1.28.0 \
-    && go build -ldflags="-s -w" -o /app/gin-use .
+COPY go.mod .
+COPY go.sum .
+RUN go mod tidy
+
+COPY . .
+RUN go build -ldflags="-s -w" -o /app/gin-use .
 
 FROM alpine
     RUN apk update --no-cache && apk add --no-cache ca-certificates tzdata

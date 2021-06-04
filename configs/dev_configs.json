@@ -1,10 +1,8 @@
 {
-  "discover": {
-    "host": "127.0.0.1",
-    "instanceid": "xicheng-account-localhost",
-    "port": 8500,
-    "servicename": "xicheng-account",
-    "weight": 10
+  "consul": {
+    "configpath": "test/test_config",
+    "host": "192.168.1.7",
+    "port": "8500"
   },
   "hashids": {
     "length": 12,
@@ -16,9 +14,9 @@
   },
   "mail": {
     "host": "smtp.163.com",
-    "pass": "123456",
+    "pass": "1234567",
     "port": 465,
-    "to": "",
+    "to": "ll",
     "user": "lk"
   },
   "pg": {

@@ -1,6 +1,6 @@
 ## 初始化使用
 * go mod init 
-* go mod tidy
+* go mod tidy  |  go install
 * swag init  
 * sh scripts/start.sh
 
