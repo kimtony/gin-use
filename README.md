@@ -1,6 +1,22 @@
 # gin-demo
 
-## [使用运行](./docs/use.md)
+
+```
+## 初始化使用
+* go mod init 
+* go mod tidy  |  go install
+* swag init  
+* sh scripts/start.sh
+
+
+## go.mod
+* 使用viper/remote包会报错需添加:
+* replace google.golang.org/grpc => google.golang.org/grpc v1.28.0
+
+```
+
+
+
 
 ## go相关资料文档
 * https://www.bookstack.cn/read/topgoer/b0a74e6ce3f8548b.md
@@ -78,6 +94,26 @@ go get  -v -u github.com/golang/protobuf/protoc-gen-go
 * [go代码安全](https://github.com/Tencent/secguide/blob/main/Go%E5%AE%89%E5%85%A8%E6%8C%87%E5%8D%97.md)
 
 
+## 其他
+```
+## viper配置
+
+可读取多个配置文件
+x := viper.New()
+y := viper.New()
+ 
+x.SetDefault("ContentDir", "content")
+y.SetDefault("ContentDir", "foobar")
+
+
+##构造一个对象参数
+
+map[string]string  如果是这样定义则value都为string
+inpayload := map[string]interface{}{
+    "account": "3345472145214",
+    "name":    "lk",
+    "age":     18,
+}
 
 
 

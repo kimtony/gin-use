@@ -1,17 +1,27 @@
+definitions:
+  model.Account:
+    properties:
+      id:
+        type: string
+      mobile:
+        type: string
+      name:
+        type: string
+    type: object
 host: 192.168.1.163:8081
 info:
   contact: {}
   license:
     name: MIT
-    url: https://github.com/xinliangnote/go-gin-api/blob/master/LICENSE
+    url: https://www.baidu.com
   title: swagger 接口文档
   version: "2.0"
 paths:
-  /api/health:
+  /api/account/info:
     get:
       consumes:
       - application/json
-      description: 服务是否启动正常检查
+      description: 用户个人信息
       parameters:
       - description: ID
         in: path
@@ -22,8 +32,46 @@ paths:
       - application/json
       responses:
         "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Account'
+      security:
+      - OAuth2Application:
+        - read
+        - account
+      summary: 用户个人信息
+      tags:
+      - account服务
+  /api/health:
+    get:
+      consumes:
+      - application/json
+      description: 服务是否启动正常检查
+      produces:
+      - application/json
+      responses:
+        "200":
           description: ""
       summary: 健康检查接口
       tags:
       - 监测服务
+  /api/wechat:
+    get:
+      consumes:
+      - application/json
+      description: 微信服务
+      parameters:
+      - description: Name
+        in: path
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+      summary: 微信服务
+      tags:
+      - 微信服务
 swagger: "2.0"

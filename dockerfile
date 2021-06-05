@@ -4,14 +4,14 @@ ENV CGO_ENABLED=0 \
     GOARCH=amd64 \
     GOPROXY=https://goproxy.cn,direct 
 
-WORKDIR /build/gin-use
+WORKDIR /workspace
 
-COPY go.mod .
 COPY go.sum .
+COPY go.mod .
 RUN go mod tidy
 
 COPY . .
-RUN go build -ldflags="-s -w" -o /app/gin-use .
+RUN go build -ldflags="-s -w" -o /app/service .
 
 FROM alpine
     RUN apk update --no-cache && apk add --no-cache ca-certificates tzdata
@@ -20,7 +20,9 @@ FROM alpine
     # 设置工作目录
     WORKDIR /data/app
     # 复制生成的可执行命令
-    COPY --from=build /app/gin-use .
+    COPY --from=build /app/service .
+    COPY --from=build /workspace/docs ./docs
+
 
 EXPOSE 8081
-CMD [ "./gin-use" ]
+CMD [ "./service" ]

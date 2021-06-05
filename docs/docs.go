@@ -21,13 +21,53 @@ var doc = `{
         "contact": {},
         "license": {
             "name": "MIT",
-            "url": "https://github.com/xinliangnote/go-gin-api/blob/master/LICENSE"
+            "url": "https://www.baidu.com"
         },
         "version": "{{.Version}}"
     },
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
+        "/api/account/info": {
+            "get": {
+                "security": [
+                    {
+                        "OAuth2Application": [
+                            "read",
+                            "account"
+                        ]
+                    }
+                ],
+                "description": "用户个人信息",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "account服务"
+                ],
+                "summary": "用户个人信息",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.Account"
+                        }
+                    }
+                }
+            }
+        },
         "/api/health": {
             "get": {
                 "description": "服务是否启动正常检查",
@@ -41,11 +81,31 @@ var doc = `{
                     "监测服务"
                 ],
                 "summary": "健康检查接口",
+                "responses": {
+                    "200": {
+                        "description": ""
+                    }
+                }
+            }
+        },
+        "/api/wechat": {
+            "get": {
+                "description": "微信服务",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "微信服务"
+                ],
+                "summary": "微信服务",
                 "parameters": [
                     {
-                        "type": "integer",
-                        "description": "ID",
-                        "name": "id",
+                        "type": "string",
+                        "description": "Name",
+                        "name": "name",
                         "in": "path",
                         "required": true
                     }
@@ -54,6 +114,22 @@ var doc = `{
                     "200": {
                         "description": ""
                     }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "model.Account": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "mobile": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
                 }
             }
         }

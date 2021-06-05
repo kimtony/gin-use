@@ -1,21 +1,18 @@
 package main
 
 import (
-	// "context"
+	"encoding/json"
 	"fmt"
+	"gin-use/bootstrap"
 	"gin-use/configs"
 	_ "gin-use/docs"
 	"gin-use/src/global"
+	"gin-use/src/model"
 	"gin-use/src/routes"
-	"gin-use/src/util/cache"
-	"gin-use/src/util/consul"
-	"gin-use/src/util/db"
-	"gin-use/src/util/env"
-	"gin-use/src/util/logger"
+	"io/ioutil"
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload"
-	"go.uber.org/zap"
 )
 
 var (
@@ -29,45 +26,39 @@ var (
 // @contact.url
 // @contact.email
 // @license.name MIT
-// @license.url https://github.com/xinliangnote/go-gin-api/blob/master/LICENSE
+// @license.url https://www.baidu.com
 // @host 192.168.1.163:8081
 // @BasePath
 func main() {
+	test()
+	//系统初始化
+	bootstrap.Init()
 
-	// 初始化 logger
-	loggers, err := logger.NewJSONLogger(
-		logger.WithField("domain", fmt.Sprintf("%s:%s", configs.ProjectName(), env.Active().Value())),
-		logger.WithTimeLayout("2006-01-02 15:04:05"),
-		logger.WithFileP(configs.ProjectLogFile()),
-	)
-	if err != nil {
-		panic(err)
-	}
-	defer loggers.Sync()
-	global.Logger = loggers
-
-	// 初始化数据库
-	dbRepo, err := db.New()
-	if err != nil {
-		loggers.Error("new db err", zap.Error(err))
-	}
-	global.DB = dbRepo
-
-	//初始化缓存服务
-	cacheRepo, err := cache.New()
-	if err != nil {
-		loggers.Error("new cahe err", zap.Error(err))
-	}
-	global.Cache = cacheRepo
-
-	//consul服务注册与发现
-	consul.Register()
-	consul.CheckHeath()
+	defer global.DB.DbRClose()
+	defer global.DB.DbWClose()
 
 	// 初始化 HTTP 服务
-	r := routes.InitRouter()
-	if err := r.Run(fmt.Sprintf(":%s", configs.ProjectPort())); err != nil {
+	engine := routes.InitRouter()
+	if err := engine.Run(fmt.Sprintf(":%s", configs.ProjectPort())); err != nil {
 		fmt.Println("HTTP Server启动失败")
 	}
 
+}
+
+func test() {
+	//读取service_define
+	bytes, err := ioutil.ReadFile("./docs/swagger.json")
+	if err != nil {
+		panic(err)
+	}
+	var swagger *model.Swagger
+	json.Unmarshal([]byte(bytes), &swagger)
+	// fmt.Println("---swagger------", swagger)
+
+	for key, value := range swagger.Paths {
+		fmt.Println("--key-value------", key, value)
+
+		fmt.Println("--key-value------", key)
+
+	}
 }

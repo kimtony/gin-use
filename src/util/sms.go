@@ -2,6 +2,8 @@ package util
 
 import (
 	"encoding/json"
+	"go.uber.org/zap"
+	"gin-use/src/global"
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/dysmsapi"
 	"os"
 )
@@ -27,12 +29,12 @@ func SendSMS(mobile string ,code string)  string{
 
 	response, err := client.SendSms(request)
 	if err != nil {
-		LogInfo("sms.log" ,"短信获取response失败:"+err.Error())
+		global.Logger.Error("短信获取response失败", zap.Error(err))
 		return "短信获取response失败"
 	}
 
 	if response == nil {
-		LogInfo("sms.log" ,"短信获取response是nil")
+		global.Logger.Error("短信获取response是nil", zap.Error(err))
 		return "短信获取response是nil"
 	}
 
@@ -42,7 +44,7 @@ func SendSMS(mobile string ,code string)  string{
 	if resMessage=="OK" && resCode=="OK" {
 		return ""
 	}else {
-		LogInfo("sms.log" ,"短信发送失败，触发警告，:"+resMessage)
+		global.Logger.Warn("短信发送失败，触发警告：", zap.String("resMessage:",resMessage))
 		return resMessage
 	}
 }

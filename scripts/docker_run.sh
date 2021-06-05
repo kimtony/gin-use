@@ -15,7 +15,6 @@ docker run --restart=always  -d \
 -e CONSUL_HOST=192.168.1.7 \
 -e CONSUL_PORT=8500 \
 -e CONSUL_CONFIG_PATH=test/test_config \
--v ${file_path}/docs:/data/app/docs \
 -v ${file_path}/configs:/data/app/configs \
 -v ${file_path}/logs:/data/app/logs \
 ${docker_addr}/${slu_name}/${app_name}/${env}
