@@ -2,5 +2,5 @@
 .idea/*
 main
 nohup.out
-logs/*
-gin-use
+
+*.log

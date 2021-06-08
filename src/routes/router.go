@@ -3,10 +3,11 @@ package routes
 import (
 	"gin-use/configs"
 	"gin-use/src/controller"
-	"gin-use/src/controller/v1"
+	v1 "gin-use/src/controller/v1"
 	"gin-use/src/middleware"
-    "github.com/gin-gonic/gin"
+
 	"github.com/gin-contrib/pprof"
+	"github.com/gin-gonic/gin"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	swaggerFiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
@@ -16,27 +17,23 @@ var r = gin.Default()
 
 func InitRouter() *gin.Engine {
 
-
-	r.Use(middleware.CORSMiddleware(),middleware.RequestInspect())
+	r.Use(
+		middleware.CORSMiddleware(),	//cors跨域
+		middleware.LoadCurrentApi(),    //加载当前api
+		middleware.LoadCurrentUser(),	//加载当前用户
+		middleware.ApiValidator(),		//api参数校验
+	)
 
 	api := r.Group("/api")
 	{
 		//健康检查
 		api.GET("/health", controller.Health)
+	}
 
-		api.GET("/account/info", v1.AccountInfo)
-
-		api.GET("/account/wechat", v1.Wechat)
-
-
-		//员工
-		// api.GET("/staff", controller.Staff)
-
-		//redis测试
-		// api.GET("/redis/test", controller.RedisTest)
-
-		//token
-		// api.GET("/token/test", controller.Token)
+	apiV1 := r.Group("/v1")
+	{
+		apiV1.GET("/account/info", v1.AccountInfo)
+		apiV1.GET("/account/wechat", v1.Wechat)
 	}
 
 	//pprof

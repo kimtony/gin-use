@@ -9,7 +9,7 @@
     "secret": "6ab6122836cfef95f8db"
   },
   "jwt": {
-    "expireduration": 24,
+    "expireduration": 2,
     "secret": "i1ydX9RtHyuJTrw7frcu"
   },
   "mail": {

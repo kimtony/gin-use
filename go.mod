@@ -27,6 +27,7 @@ require (
 	github.com/leodido/go-urn v1.2.0 // indirect
 	github.com/lukechampine/randmap v0.0.0-20161125183226-9e3c222d0413 // indirect
 	github.com/minio/blake2b-simd v0.0.0-20160723061019-3f5f724cb5b1 // indirect
+	github.com/natefinch/lumberjack v2.0.0+incompatible // indirect
 	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.5.1
 	github.com/prometheus/common v0.10.0 // indirect

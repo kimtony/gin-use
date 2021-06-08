@@ -32,8 +32,10 @@ var doc = `{
             "get": {
                 "security": [
                     {
+                        "token": []
+                    },
+                    {
                         "OAuth2Application": [
-                            "read",
                             "account"
                         ]
                     }
@@ -55,6 +57,13 @@ var doc = `{
                         "description": "ID",
                         "name": "id",
                         "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Authorization",
+                        "name": "token",
+                        "in": "header",
                         "required": true
                     }
                 ],
@@ -81,6 +90,14 @@ var doc = `{
                     "监测服务"
                 ],
                 "summary": "健康检查接口",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "用户名",
+                        "name": "name",
+                        "in": "query"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": ""
@@ -89,7 +106,7 @@ var doc = `{
             }
         },
         "/api/wechat": {
-            "get": {
+            "post": {
                 "description": "微信服务",
                 "consumes": [
                     "application/json"
@@ -103,11 +120,13 @@ var doc = `{
                 "summary": "微信服务",
                 "parameters": [
                     {
-                        "type": "string",
                         "description": "Name",
                         "name": "name",
-                        "in": "path",
-                        "required": true
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
                     }
                 ],
                 "responses": {

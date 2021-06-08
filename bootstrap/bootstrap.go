@@ -2,14 +2,10 @@ package bootstrap
 
 import (
 
-	"fmt"
-	"gin-use/configs"
 	"gin-use/src/util/cache"
 	"gin-use/src/util/logger"
-	"go.uber.org/zap"
 	"gin-use/src/util/db"
 	"gin-use/src/global"
-	"gin-use/src/util/env"
 	"gin-use/src/util/consul"
 
 )
@@ -20,23 +16,15 @@ import (
 */
 func Init() {
 
-
 	// 初始化 logger
-	loggers, err := logger.NewJSONLogger(
-		logger.WithField("domain", fmt.Sprintf("%s:%s", configs.ProjectName(), env.Active().Value())),
-		logger.WithTimeLayout("2006-01-02 15:04:05"),
-		logger.WithFileP(configs.ProjectLogFile()),
-	)
-	if err != nil {
-		panic(err)
-	}
+	loggers := logger.Log()
 	global.Logger = loggers
 	defer loggers.Sync()
 
 	// 初始化数据库
 	dbRepo, err := db.New()
 	if err != nil {
-		loggers.Error("new db err", zap.Error(err))
+		loggers.Errorf("new db fail, err:%v", err)
 	}
 	global.DB = dbRepo
 
@@ -44,7 +32,7 @@ func Init() {
 	//初始化缓存服务
 	cacheRepo, err := cache.New()
 	if err != nil {
-		loggers.Error("new cahe err", zap.Error(err))
+		loggers.Errorf("new db fail, err:%v", err)
 	}
 	global.Cache = cacheRepo
 

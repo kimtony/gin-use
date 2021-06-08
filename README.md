@@ -1,6 +1,5 @@
 # gin-demo
 
-
 ```
 ## 初始化使用
 * go mod init 
@@ -8,18 +7,12 @@
 * swag init  
 * sh scripts/start.sh
 
-
 ## go.mod
 * 使用viper/remote包会报错需添加:
 * replace google.golang.org/grpc => google.golang.org/grpc v1.28.0
 
 ```
 
-
-
-
-## go相关资料文档
-* https://www.bookstack.cn/read/topgoer/b0a74e6ce3f8548b.md
 
 ## 开发工具 vscode
 * [插件+代码块](https://www.liwenzhou.com/posts/Go/00_go_in_vscode/)
@@ -114,7 +107,4 @@ inpayload := map[string]interface{}{
     "name":    "lk",
     "age":     18,
 }
-
-
-
-
+```

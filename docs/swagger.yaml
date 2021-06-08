@@ -28,6 +28,11 @@ paths:
         name: id
         required: true
         type: integer
+      - description: Authorization
+        in: header
+        name: token
+        required: true
+        type: string
       produces:
       - application/json
       responses:
@@ -36,8 +41,8 @@ paths:
           schema:
             $ref: '#/definitions/model.Account'
       security:
+      - token: []
       - OAuth2Application:
-        - read
         - account
       summary: 用户个人信息
       tags:
@@ -47,6 +52,11 @@ paths:
       consumes:
       - application/json
       description: 服务是否启动正常检查
+      parameters:
+      - description: 用户名
+        in: query
+        name: name
+        type: string
       produces:
       - application/json
       responses:
@@ -56,16 +66,17 @@ paths:
       tags:
       - 监测服务
   /api/wechat:
-    get:
+    post:
       consumes:
       - application/json
       description: 微信服务
       parameters:
       - description: Name
-        in: path
+        in: body
         name: name
         required: true
-        type: string
+        schema:
+          type: string
       produces:
       - application/json
       responses:

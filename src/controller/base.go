@@ -14,7 +14,6 @@ import (
 
 	"github.com/ddliu/go-httpclient"
 	"github.com/gin-gonic/gin"
-	"go.uber.org/zap"
 )
 
 var resp *response.Resp
@@ -25,6 +24,7 @@ var resp *response.Resp
 // @Tags 监测服务
 // @Accept application/json
 // @Produce application/json
+// @Param name query string false "用户名"
 // @Success 200
 // @Router /api/health [get]
 func Health(c *gin.Context) {
@@ -39,14 +39,13 @@ func Health(c *gin.Context) {
 func test() {
 	// 从consul中发现服务
 	xichengCommon := consul.FindServer("xicheng-common", "")
-
-	global.Logger.Info("嘿，我能调用了 xicheng-common服务", zap.String("xichengCommon", xichengCommon))
+	global.Logger.Info("嘿，我能调用了 xicheng-common服务, xichengCommon:%s", xichengCommon)
 
 	api := xichengCommon + "/api/health"
 
 	res, err := httpclient.Get(api)
 	if err != nil {
-		fmt.Println("--------err----", err)
+		global.Logger.Errorf("http-client, err:%v", err)
 	}
 	bodyString, err := res.ToString()
 	if err != nil {

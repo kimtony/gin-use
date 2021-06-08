@@ -1,142 +1,552 @@
-{"level":"info","time":"2021-05-27 15:16:38","caller":"gin-use/main.go:43","msg":"傻逼日志不能调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:16:39","caller":"gin-use/main.go:43","msg":"傻逼日志不能调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:16:40","caller":"gin-use/main.go:43","msg":"傻逼日志不能调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:20:52","caller":"gin-use/main.go:43","msg":"傻逼日志不能调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:20:53","caller":"gin-use/main.go:43","msg":"傻逼日志不能调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:21:30","caller":"gin-use/main.go:43","msg":"傻逼日志不能调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:22:18","caller":"gin-use/main.go:43","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:24:24","caller":"gin-use/main.go:43","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:26:11","caller":"gin-use/main.go:43","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:45:40","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:45:46","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:45:47","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:46:42","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:46:43","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:49:01","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:49:05","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:49:07","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:49:22","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:49:24","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:50:07","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:50:21","caller":"gin-use/main.go:46","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:50:23","caller":"controller/base.go:23","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 15:51:53","caller":"gin-use/main.go:47","msg":"傻逼日志怎么全局调用","domain":"gin-use[fat]"}
-{"level":"error","time":"2021-05-27 16:36:06","caller":"gin-use/main.go:59","msg":"new db err","domain":"gin-use[fat]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:57\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
-{"level":"error","time":"2021-05-27 16:36:13","caller":"gin-use/main.go:59","msg":"new db err","domain":"gin-use[fat]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:57\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
-{"level":"error","time":"2021-05-27 16:36:20","caller":"gin-use/main.go:59","msg":"new db err","domain":"gin-use[fat]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:57\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
-{"level":"error","time":"2021-05-27 16:36:22","caller":"gin-use/main.go:59","msg":"new db err","domain":"gin-use[fat]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:57\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
-{"level":"info","time":"2021-05-27 17:08:29","caller":"controller/base.go:30","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 17:09:16","caller":"controller/base.go:30","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 17:09:55","caller":"controller/base.go:30","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 17:41:04","caller":"controller/base.go:31","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 17:41:30","caller":"controller/base.go:31","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-27 17:44:27","caller":"controller/base.go:31","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 10:08:50","caller":"controller/base.go:31","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 11:50:31","caller":"controller/base.go:31","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 13:59:19","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 14:02:56","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 14:38:29","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 14:39:39","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 14:39:40","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 14:39:40","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 14:39:41","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 14:39:41","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 14:39:41","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 14:39:42","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 14:39:42","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 14:39:42","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"info","time":"2021-05-28 14:41:11","caller":"controller/base.go:32","msg":"嘿，我能调用了","domain":"gin-use[fat]"}
-{"level":"error","time":"2021-05-29 17:01:23","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[fat]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
-{"level":"error","time":"2021-05-29 17:01:23","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[fat]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
-{"level":"error","time":"2021-05-29 17:04:00","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[fat]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
-{"level":"error","time":"2021-05-29 17:04:00","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[fat]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
-{"level":"error","time":"2021-05-29 17:05:35","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[fat]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
-{"level":"error","time":"2021-05-29 17:05:35","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[fat]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:203\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1373"}
-{"level":"error","time":"2021-05-29 17:32:42","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[fat]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-05-29 17:32:42","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[fat]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:57:36","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:57:36","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:57:39","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:57:40","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:57:44","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:57:44","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:57:46","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:57:46","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:57:52","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:57:52","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:04","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:04","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:09","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:09","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:10","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:10","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:32","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:32","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:42","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:42","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:51","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:51","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:57","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:58:57","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:00","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:00","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:06","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:06","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:08","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:08","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:15","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:15","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:29","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:29","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:34","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:34","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:38","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 14:59:38","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:04","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:04","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:07","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:07","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:14","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:14","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:16","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:16","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:31","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:31","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:36","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:36","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:39","caller":"gin-use/main.go:49","msg":"new db err","domain":"gin-use[dev]","error":"[db connection failed] Database name: : failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","errorVerbose":"failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)\n[db connection failed] Database name: \ngin-use/src/util/db.dbConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:83\ngin-use/src/util/db.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/db/postgres.go:30\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:47\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"error","time":"2021-06-01 15:00:39","caller":"gin-use/main.go:56","msg":"new cahe err","domain":"gin-use[dev]","error":"ping redis err: dial tcp 127.0.0.1:6379: connect: connection refused","errorVerbose":"dial tcp 127.0.0.1:6379: connect: connection refused\nping redis err\ngin-use/src/util/cache.redisConnect\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:71\ngin-use/src/util/cache.New\n\t/home/linkai/data/workspace/goWork/src/gin-use/src/util/cache/redis.go:47\nmain.main\n\t/home/linkai/data/workspace/goWork/src/gin-use/main.go:54\nruntime.main\n\t/usr/local/go/src/runtime/proc.go:225\nruntime.goexit\n\t/usr/local/go/src/runtime/asm_amd64.s:1371"}
-{"level":"info","time":"2021-06-03 20:04:32","caller":"controller/base.go:52","msg":"嘿，我能调用了","domain":"gin-use[dev]"}
-{"level":"info","time":"2021-06-03 20:07:14","caller":"controller/base.go:36","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-03 20:09:45","caller":"controller/base.go:36","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-03 20:10:14","caller":"controller/base.go:36","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 10:06:56","caller":"controller/base.go:36","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 10:28:45","caller":"controller/base.go:36","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 10:28:46","caller":"controller/base.go:36","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 10:43:10","caller":"controller/base.go:38","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 11:42:14","caller":"controller/base.go:39","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 11:42:20","caller":"controller/base.go:39","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 11:42:25","caller":"controller/base.go:39","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 11:42:30","caller":"controller/base.go:39","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 11:42:35","caller":"controller/base.go:39","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 11:42:40","caller":"controller/base.go:39","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 11:42:45","caller":"controller/base.go:39","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 11:42:50","caller":"controller/base.go:39","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 11:42:59","caller":"controller/base.go:39","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 11:43:04","caller":"controller/base.go:39","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 11:43:10","caller":"controller/base.go:39","msg":"嘿，我能调用了 xicheng-common服务","domain":"gin-use[dev]","xichengCommon":"http://192.168.1.7:7102"}
-{"level":"info","time":"2021-06-04 14:06:29","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:06:31","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:06:32","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:06:33","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:06:34","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:06:34","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:06:35","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:06:36","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:06:36","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:06:38","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:06:41","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:07:14","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:07:17","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:07:18","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
-{"level":"info","time":"2021-06-04 14:07:19","caller":"gin-use/main.go:67","msg":"嘿，我能调用了 xicheng-account ","domain":"gin-use:dev","xichengCommon":"http://192.168.1.7:7101"}
+{"level":"DEBUG","ts":"2021-06-08T17:49:48.479+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:49:53.487+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:49:58.493+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:50:03.499+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:50:08.506+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:50:13.528+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:50:18.777+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:50:23.784+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:50:28.792+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:50:33.802+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:50:38.813+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:50:43.819+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:50:48.828+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:50:53.834+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:50:58.841+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:51:03.847+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:51:08.857+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:51:13.865+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:51:18.872+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:51:23.884+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:51:28.894+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:51:33.906+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:51:38.925+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:51:43.948+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:51:48.958+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:51:53.964+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:51:58.971+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:52:03.979+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:52:08.987+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:52:14.011+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:52:19.193+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:52:24.199+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:52:29.205+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:52:34.213+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:52:39.836+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:52:44.843+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:52:49.857+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:52:54.866+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:52:59.874+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:53:05.507+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:53:10.536+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:53:15.543+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:53:21.273+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:53:26.279+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:53:31.301+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:53:36.935+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:53:41.946+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:53:46.961+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:53:51.968+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:53:56.976+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:54:01.986+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:54:06.994+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:54:12.003+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:54:17.011+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:54:22.020+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:54:27.028+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:54:32.036+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:54:37.041+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:54:42.046+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:54:47.061+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:54:52.104+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:54:57.128+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:55:02.135+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:55:07.142+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:55:12.150+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:55:17.156+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:55:22.166+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:55:27.175+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:55:32.205+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:55:37.216+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:55:42.222+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:55:47.230+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:55:52.239+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:55:57.251+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:56:02.288+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:56:07.327+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:56:12.347+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:56:17.354+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:56:22.360+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:56:27.365+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:56:32.371+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:56:37.379+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:56:42.387+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:56:47.395+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:56:52.404+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:56:57.410+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:57:02.435+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:57:07.451+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:57:12.460+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:57:17.468+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:57:22.476+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:57:27.483+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:57:32.492+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:57:37.511+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:57:43.374+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:57:48.387+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:57:53.401+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:57:58.411+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:58:03.423+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:58:08.433+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:58:13.442+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:58:18.447+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:58:23.461+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:58:28.485+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:58:33.495+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:58:38.505+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:58:43.512+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:58:48.540+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:58:53.546+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:58:59.475+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:59:04.483+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:59:09.496+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:59:14.506+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:59:19.518+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:59:24.551+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:59:29.561+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:59:34.629+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:59:39.638+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:59:44.651+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:59:49.667+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:59:54.684+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T17:59:59.707+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:00:04.722+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:00:09.729+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:00:14.756+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:00:19.775+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:00:24.782+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:00:29.790+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:00:34.801+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:00:39.810+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:00:44.827+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:00:49.842+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:00:54.850+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:00:59.865+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:01:04.882+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:01:09.905+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:01:14.924+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:01:19.930+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:01:24.937+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:01:29.944+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:01:34.951+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:01:40.533+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:01:45.543+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:01:50.558+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:01:56.534+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:02:01.551+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:02:06.564+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:02:11.570+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:02:16.581+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:02:21.590+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:02:26.600+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:02:31.610+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:02:36.617+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:02:41.623+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:02:46.635+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:02:52.657+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:02:57.664+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:03:02.671+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:03:07.679+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:03:13.698+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:03:18.713+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:03:23.721+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:03:28.731+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:03:33.751+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:03:38.774+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:03:43.780+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:03:48.815+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:03:53.823+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:03:58.831+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:04:03.842+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:04:08.853+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:04:13.864+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:04:18.880+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:04:23.887+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:04:28.896+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:04:33.904+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:04:38.910+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:04:43.919+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:04:48.929+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:04:53.937+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:04:58.944+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:05:03.952+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:05:08.960+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:05:14.977+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:05:19.986+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:05:24.996+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:05:30.003+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:05:35.009+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:05:40.020+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:05:45.026+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:05:50.032+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:05:55.041+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:06:00.050+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:06:05.061+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:06:10.067+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:06:15.072+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:06:20.081+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:06:25.090+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:06:30.097+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:06:35.105+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:06:40.113+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:06:45.121+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:06:50.127+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:06:55.133+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:07:00.147+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:07:05.156+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:07:10.170+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:07:15.192+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:07:20.564+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:07:26.217+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:07:31.225+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:07:36.235+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:07:41.244+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:07:46.250+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:07:51.259+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:07:56.266+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:08:01.273+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:08:06.283+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:08:11.291+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:08:16.305+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:08:21.322+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:08:26.333+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:08:31.349+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:08:36.357+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:08:41.365+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:08:46.784+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:08:52.260+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:08:57.268+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:09:02.279+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:09:07.287+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:09:12.295+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:09:17.349+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:09:22.364+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:09:27.374+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:09:32.382+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:09:37.647+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:09:42.657+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:09:48.344+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:09:53.358+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:09:58.367+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:10:03.381+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:10:08.387+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:10:13.396+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:10:18.409+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:10:23.434+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:10:28.441+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:10:33.447+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:10:38.454+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:10:43.464+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:10:48.473+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:10:53.483+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:10:58.922+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:11:03.931+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:11:08.941+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:11:14.606+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:11:19.617+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:11:24.624+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:11:29.632+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:11:34.639+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:11:39.655+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:11:44.666+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:11:49.675+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:11:54.691+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:11:59.699+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:12:04.712+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:12:09.725+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:12:14.737+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:12:19.744+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:12:24.753+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:12:29.765+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:12:34.999+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:12:40.014+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:12:45.033+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:12:50.045+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:12:55.066+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:13:00.084+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:13:05.092+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:13:10.100+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:13:15.125+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:13:20.137+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:13:25.150+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:13:30.156+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:13:36.189+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:13:41.204+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:13:46.215+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:13:51.226+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:13:56.245+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:14:01.258+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:14:06.271+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:14:11.288+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:14:16.312+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:14:21.958+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:14:26.973+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:14:31.985+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:14:36.999+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:14:42.007+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:14:47.017+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:14:52.036+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:14:57.051+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:15:02.067+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:15:07.084+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:15:12.095+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:15:17.102+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:15:22.117+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:15:27.127+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:15:32.140+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:15:37.152+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:15:42.163+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:15:47.176+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:15:52.186+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:15:57.205+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:16:02.212+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:16:07.229+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:16:12.238+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:16:17.246+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:16:22.267+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:16:27.273+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:16:32.280+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:16:37.291+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:16:42.713+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:16:47.720+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:16:52.730+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:16:57.739+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:17:02.745+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:17:07.752+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:17:12.759+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:17:17.767+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:17:22.773+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:17:27.790+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:17:32.799+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:17:37.807+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:17:42.814+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:17:47.823+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:17:52.834+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:17:58.085+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:18:03.097+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:18:08.106+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:18:13.139+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:18:18.145+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:18:23.183+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:18:28.254+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:18:33.450+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:18:39.144+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:18:44.212+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:18:49.221+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:18:54.230+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:18:59.242+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:19:04.253+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:19:10.274+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:19:15.281+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:19:20.287+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:19:25.297+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:19:30.308+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:19:35.905+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:19:40.922+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:19:46.528+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:19:51.536+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:19:56.545+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:20:01.556+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:20:06.563+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:20:11.577+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:20:16.591+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:20:22.421+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:20:27.431+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:20:32.438+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:20:37.447+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:20:42.455+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:20:47.466+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:20:52.473+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:20:57.483+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:21:02.494+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:21:07.503+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:21:12.513+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:21:17.528+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:21:22.536+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:21:27.556+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:21:32.565+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:21:37.576+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:21:42.586+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:21:47.599+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:21:52.611+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:21:58.265+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:22:03.284+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:22:08.315+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:22:13.324+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:22:18.332+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:22:23.340+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:22:28.346+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:22:33.356+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:22:38.365+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:22:43.388+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:22:48.607+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:22:53.620+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:22:58.626+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:23:03.653+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:23:08.663+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:23:13.670+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:23:18.683+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:23:23.693+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:23:28.703+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:23:33.711+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:23:38.738+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:23:43.744+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:23:48.753+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:23:53.763+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:23:58.770+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:24:03.781+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:24:08.790+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:24:13.798+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:24:18.806+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:24:23.819+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:24:28.832+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:24:33.845+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:24:38.854+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:24:43.865+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:24:48.878+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:24:53.886+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:24:58.899+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:25:03.912+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:25:08.922+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:25:14.110+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:25:19.121+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:25:24.133+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:25:29.139+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:25:34.150+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:25:39.158+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:25:44.164+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:25:50.146+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:25:55.176+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:26:00.189+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:26:05.203+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:26:10.214+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:26:15.228+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:26:20.240+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:26:26.222+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:26:31.232+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:26:36.240+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:26:41.251+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:26:46.271+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:26:51.292+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:26:56.298+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:27:01.320+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:27:06.327+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:27:11.338+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:27:16.362+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:27:22.221+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:27:27.232+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:27:32.246+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:27:37.253+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:27:42.265+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:27:47.276+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:27:52.282+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:27:57.289+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:28:02.296+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:28:07.850+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:28:12.878+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:28:17.886+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:28:22.893+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:28:27.903+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:28:32.911+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:28:37.920+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:28:43.392+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:28:48.413+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:28:53.422+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:28:58.430+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:29:03.438+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:29:08.448+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:29:13.793+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:29:18.817+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:29:23.826+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:29:28.834+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:29:33.843+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:29:38.860+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:29:43.870+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:29:48.877+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:29:53.886+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:29:58.901+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:30:03.909+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:30:08.919+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:30:13.931+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:30:18.939+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:30:23.947+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:30:28.953+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:30:33.964+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:30:38.970+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:30:43.975+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:30:48.981+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:30:53.990+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:30:58.998+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:31:04.012+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:31:09.025+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:31:14.050+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:31:19.058+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:31:24.066+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:31:29.073+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:31:34.083+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:31:39.090+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:31:44.103+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:31:49.113+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:31:54.127+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:31:59.566+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:32:04.577+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:32:09.604+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:32:14.622+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:32:19.635+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:32:24.652+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:32:29.663+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:32:34.682+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:32:40.525+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:32:45.533+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:32:50.540+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:32:55.555+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:33:00.569+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:33:05.579+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:33:10.589+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:33:15.607+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:33:20.614+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:33:25.620+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:33:31.192+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:33:36.202+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:33:41.245+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:33:46.250+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:33:51.257+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:33:56.263+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:34:01.269+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:34:06.274+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:34:11.729+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:34:16.737+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:34:21.743+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:34:26.749+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:34:31.764+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:34:36.777+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:34:41.782+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:34:46.792+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:34:51.798+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:34:56.804+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:35:01.815+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:35:07.226+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:35:12.232+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:35:17.238+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:35:22.247+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:35:27.435+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:35:32.442+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:35:37.456+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:35:42.463+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:35:47.468+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:35:52.474+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:35:57.481+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:36:03.489+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:36:08.496+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:36:13.502+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}
+{"level":"DEBUG","ts":"2021-06-08T18:36:18.515+0800","caller":"middleware/loadCurrentApi.go:22","msg":"---获取到请求的接口--- : /api/health  get"}

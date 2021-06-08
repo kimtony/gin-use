@@ -12,5 +12,6 @@ var (
 	DB     db.Repo
 	Cache  cache.Repo
 	Viper  *viper.Viper
-	Logger *zap.Logger
+	Logger *zap.SugaredLogger
+
 )
