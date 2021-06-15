@@ -79,13 +79,18 @@ func init() {
 	//config_path 路径为 consul下key value的文件路径
 	viper.AddRemoteProvider("consul", ConsulAddr(), os.Getenv("CONSUL_CONFIG_PATH"))
 
+	if os.Getenv("CONSUL_HOST") == "" {
+		fmt.Println("获取consul配置CONSUL_HOST为空 无法启用consul服务注册与发现!")
+	}
+
 	//指定读取json文件
 	viper.SetConfigType("json")
 
 	//获取consul配置
 	if err := viper.ReadRemoteConfig(); err != nil {
-		fmt.Println("获取consul配置文件报错", err)
-		panic(err)
+		fmt.Println("获取consul配置文件报错,启用本地配置", err)
+		readLocalFileConfig()
+		// panic(err)
 	}
 
 	//将json字符串解码到相应的数据结构

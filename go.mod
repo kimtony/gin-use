@@ -16,7 +16,9 @@ require (
 	github.com/gin-contrib/sessions v0.0.3
 	github.com/gin-gonic/gin v1.5.0
 	github.com/go-kit/kit v0.10.0
+	github.com/go-playground/locales v0.13.0 // indirect
 	github.com/go-playground/universal-translator v0.17.0 // indirect
+	github.com/go-playground/validator/v10 v10.6.1 // indirect
 	github.com/go-redis/redis/v7 v7.4.0
 	github.com/gogf/gf v1.16.0
 	github.com/golang/glog v0.0.0-20210429001901-424d2337a529

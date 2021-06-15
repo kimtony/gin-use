@@ -7,6 +7,22 @@ definitions:
         type: string
       name:
         type: string
+    required:
+    - id
+    - name
+    type: object
+  request.WechatAccount:
+    properties:
+      mobile:
+        type: integer
+      nickname:
+        type: string
+      openid:
+        type: string
+    required:
+    - mobile
+    - nickname
+    - openid
     type: object
 host: 192.168.1.163:8081
 info:
@@ -17,36 +33,6 @@ info:
   title: swagger 接口文档
   version: "2.0"
 paths:
-  /api/account/info:
-    get:
-      consumes:
-      - application/json
-      description: 用户个人信息
-      parameters:
-      - description: ID
-        in: path
-        name: id
-        required: true
-        type: integer
-      - description: Authorization
-        in: header
-        name: token
-        required: true
-        type: string
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: OK
-          schema:
-            $ref: '#/definitions/model.Account'
-      security:
-      - token: []
-      - OAuth2Application:
-        - account
-      summary: 用户个人信息
-      tags:
-      - account服务
   /api/health:
     get:
       consumes:
@@ -65,23 +51,59 @@ paths:
       summary: 健康检查接口
       tags:
       - 监测服务
+  /api/v1/account/info:
+    post:
+      consumes:
+      - application/json
+      description: 用户个人信息
+      parameters:
+      - description: string valid
+        in: query
+        maxLength: 10
+        minLength: 5
+        name: string
+        type: string
+      - description: 微信参数
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/model.Account'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Account'
+      summary: request.WechatAccount
+      tags:
+      - account服务
   /api/wechat:
     post:
       consumes:
       - application/json
       description: 微信服务
       parameters:
-      - description: Name
+      - description: 微信参数
         in: body
-        name: name
+        name: data
         required: true
         schema:
-          type: string
+          $ref: '#/definitions/request.WechatAccount'
+      - description: Authorization
+        in: header
+        name: token
+        required: true
+        type: string
       produces:
       - application/json
       responses:
         "200":
           description: ""
+      security:
+      - OAuth2Application:
+        - account
       summary: 微信服务
       tags:
       - 微信服务

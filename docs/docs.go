@@ -28,55 +28,6 @@ var doc = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/api/account/info": {
-            "get": {
-                "security": [
-                    {
-                        "token": []
-                    },
-                    {
-                        "OAuth2Application": [
-                            "account"
-                        ]
-                    }
-                ],
-                "description": "用户个人信息",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "account服务"
-                ],
-                "summary": "用户个人信息",
-                "parameters": [
-                    {
-                        "type": "integer",
-                        "description": "ID",
-                        "name": "id",
-                        "in": "path",
-                        "required": true
-                    },
-                    {
-                        "type": "string",
-                        "description": "Authorization",
-                        "name": "token",
-                        "in": "header",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK",
-                        "schema": {
-                            "$ref": "#/definitions/model.Account"
-                        }
-                    }
-                }
-            }
-        },
         "/api/health": {
             "get": {
                 "description": "服务是否启动正常检查",
@@ -105,8 +56,57 @@ var doc = `{
                 }
             }
         },
+        "/api/v1/account/info": {
+            "post": {
+                "description": "用户个人信息",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "account服务"
+                ],
+                "summary": "request.WechatAccount",
+                "parameters": [
+                    {
+                        "maxLength": 10,
+                        "minLength": 5,
+                        "type": "string",
+                        "description": "string valid",
+                        "name": "string",
+                        "in": "query"
+                    },
+                    {
+                        "description": "微信参数",
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/model.Account"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.Account"
+                        }
+                    }
+                }
+            }
+        },
         "/api/wechat": {
             "post": {
+                "security": [
+                    {
+                        "OAuth2Application": [
+                            "account"
+                        ]
+                    }
+                ],
                 "description": "微信服务",
                 "consumes": [
                     "application/json"
@@ -120,13 +120,20 @@ var doc = `{
                 "summary": "微信服务",
                 "parameters": [
                     {
-                        "description": "Name",
-                        "name": "name",
+                        "description": "微信参数",
+                        "name": "data",
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "type": "string"
+                            "$ref": "#/definitions/request.WechatAccount"
                         }
+                    },
+                    {
+                        "type": "string",
+                        "description": "Authorization",
+                        "name": "token",
+                        "in": "header",
+                        "required": true
                     }
                 ],
                 "responses": {
@@ -140,6 +147,10 @@ var doc = `{
     "definitions": {
         "model.Account": {
             "type": "object",
+            "required": [
+                "id",
+                "name"
+            ],
             "properties": {
                 "id": {
                     "type": "string"
@@ -148,6 +159,25 @@ var doc = `{
                     "type": "string"
                 },
                 "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "request.WechatAccount": {
+            "type": "object",
+            "required": [
+                "mobile",
+                "nickname",
+                "openid"
+            ],
+            "properties": {
+                "mobile": {
+                    "type": "integer"
+                },
+                "nickname": {
+                    "type": "string"
+                },
+                "openid": {
                     "type": "string"
                 }
             }

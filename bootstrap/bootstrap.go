@@ -1,7 +1,7 @@
 package bootstrap
 
 import (
-
+	"gin-use/src/util/validator"
 	"gin-use/src/util/cache"
 	"gin-use/src/util/logger"
 	"gin-use/src/util/db"
@@ -40,6 +40,9 @@ func Init() {
 	//consul服务注册与发现
 	consul.Register()
 	consul.CheckHeath()
+
+	//校验器
+	validator.InitVali()
 
 	// //初始化定时任务
 	// if config.GlobalConfig.CronTaskSwitch {

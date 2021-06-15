@@ -7,7 +7,6 @@ import (
 	_ "gin-use/docs"
 	"gin-use/src/global"
 	"gin-use/src/routes"
-
 	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload"
 )
@@ -15,6 +14,7 @@ import (
 var (
 	r = gin.Default()
 )
+
 
 // @title swagger 接口文档
 // @version 2.0
@@ -32,7 +32,6 @@ func main() {
 
 	defer global.DB.DbRClose()
 	defer global.DB.DbWClose()
-
 	// 初始化 HTTP 服务
 	engine := routes.InitRouter()
 	if err := engine.Run(fmt.Sprintf(":%s", configs.ProjectPort())); err != nil {

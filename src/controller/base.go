@@ -33,7 +33,7 @@ func Health(c *gin.Context) {
 	id := snowflake.GenerateId()
 	workerid, datacenterid := snowflake.GetDeviceID(id)
 	data := map[string]interface{}{"ip": ip, "Time": now, "id": id, "datacenterid": datacenterid, "workerid": workerid}
-	Response("ok", "请求成功", data, c)
+	ResponseHttpOK("ok", "请求成功", data, c)
 }
 
 func test() {
@@ -58,12 +58,22 @@ func test() {
 }
 
 //api响应值
-func Response(code string, msg string, data interface{}, c *gin.Context) {
+func Response(httpCode int, code string, msg string, data interface{}, c *gin.Context) {
+	//反射判断interface是否为空值
+	if reflect.TypeOf(data) != nil {
+		c.JSON(httpCode, response.Resp{ code,msg,data })
+	}
+	c.JSON(httpCode, response.Resp{ code,msg,map[string]interface{}{} })
+}
+
+//成功响应
+func ResponseHttpOK( code string, msg string, data interface{}, c *gin.Context) {
 	//反射判断interface是否为空值
 	if reflect.TypeOf(data) != nil {
 		c.JSON(http.StatusOK, response.Resp{ code,msg,data })
 	}
-
 	c.JSON(http.StatusOK, response.Resp{ code,msg,map[string]interface{}{} })
-
 }
+
+
+

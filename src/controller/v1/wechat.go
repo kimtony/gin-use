@@ -14,12 +14,13 @@ import (
 // @Tags 微信服务
 // @Accept application/json
 // @Produce application/json
-// @Param name body string true "Name"
+// @Param data body request.WechatAccount  true "微信参数"
+// @param token header string true "Authorization"
+// @Security OAuth2Application[account]
 // role ["account"]
 // @Success 200
 // @Router /api/wechat [post]
 func Wechat(c *gin.Context) {
-	// data := 
 	
-	controller.Response("ok","请求成功",nil,c)
+	controller.ResponseHttpOK("ok","请求成功",nil,c)
 }
