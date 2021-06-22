@@ -5348,3 +5348,4 @@
 {"level":"ERROR","ts":"2021-06-13T13:31:47.558+0800","caller":"validator/validator.go:75","msg":"Key: 'WechatAccount.OpenID' Error:Field validation for 'OpenID' failed on the 'required' tag\nKey: 'WechatAccount.NickName' Error:Field validation for 'NickName' failed on the 'required' tag"}
 {"level":"DEBUG","ts":"2021-06-13T15:43:18.852+0800","caller":"middleware/loadCurrentApi.go:24","msg":"---获取到请求的接口--- : /api/v1/account/info  post"}
 {"level":"ERROR","ts":"2021-06-13T15:43:18.853+0800","caller":"validator/validator.go:75","msg":"EOF"}
+{"level":"ERROR","ts":"2021-06-17T11:59:22.975+0800","caller":"gin-use/main.go:38","msg":"HTTP Server启动失败, err:listen tcp :8081: bind: address already in use"}

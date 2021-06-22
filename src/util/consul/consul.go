@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"gin-use/configs"
 	"gin-use/src/global"
-	"log"
 	"math/rand"
 	"strconv"
 
@@ -28,7 +27,7 @@ func Register() {
 	config.Address = ConsulAddr
 	client, err := consulapi.NewClient(config)
 	if err != nil {
-		global.Logger.Error("consul client error : ", zap.Any("err", err))
+		global.Logger.Error("consul client error :",  err)
 	}
 
 	// 创建注册到consul的服务到
@@ -59,7 +58,7 @@ func DeRegister() {
 	config.Address = ConsulAddr
 	client, err := consulapi.NewClient(config)
 	if err != nil {
-		global.Logger.Error("consul client error : ", zap.Any("err", err))
+		global.Logger.Error("consul client error : ", err)
 	}
 	client.Agent().ServiceDeregister(registrationId)
 }
@@ -105,7 +104,7 @@ func CheckHeath() {
 	config.Address = ConsulAddr
 	client, err := consulapi.NewClient(config)
 	if err != nil {
-		log.Fatal("consul client error : ", zap.Any("err", err))
+		global.Logger.Error("consul client error : ", err)
 	}
 	// 健康检查
 	a, b, _ := client.Agent().AgentHealthServiceByID(registrationId)

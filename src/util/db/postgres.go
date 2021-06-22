@@ -3,7 +3,6 @@ package db
 import (
 	"fmt"
 	"time"
-
 	"gin-use/configs"
 	"gorm.io/driver/postgres"
 	"github.com/pkg/errors"
@@ -101,7 +100,7 @@ func dbConnect(user, pass, host, port, dbName string) (*gorm.DB, error) {
 	sqlDB.SetConnMaxLifetime(time.Minute * cfg.ConnMaxLifeTime)
 
 	// 使用插件
-	db.Use(&TracePlugin{})
+	// db.Use(&TracePlugin{})
 
 	return db, nil
 }
