@@ -26,7 +26,7 @@ var resp *response.Resp
 // @Produce application/json
 // @Param name query string false "用户名"
 // @Success 200
-// @Router /api/health [get]
+// @Router /health [get]
 func Health(c *gin.Context) {
 	ip := configs.GetLocalIp()
 	now := time.Now()
@@ -35,6 +35,28 @@ func Health(c *gin.Context) {
 	data := map[string]interface{}{"ip": ip, "Time": now, "id": id, "datacenterid": datacenterid, "workerid": workerid}
 	ResponseHttpOK("ok", "请求成功", data, c)
 }
+
+//api响应值
+func Response(httpCode int, code string, msg string, data interface{}, c *gin.Context) {
+	//反射判断interface是否为空值
+	if reflect.TypeOf(data) != nil {
+		c.JSON(httpCode, response.Resp{ code,msg,data })
+	}else{
+		c.JSON(httpCode, response.Resp{ code,msg,map[string]interface{}{} })
+	}
+}
+
+//成功响应
+func ResponseHttpOK( code string, msg string, data interface{}, c *gin.Context) {
+	//反射判断interface是否为空值
+	if reflect.TypeOf(data) != nil {
+		c.JSON(http.StatusOK, response.Resp{ code,msg,data })
+	}else{
+		c.JSON(http.StatusOK, response.Resp{ code,msg,map[string]interface{}{} })
+	}
+}
+
+
 
 func test() {
 	// 从consul中发现服务
@@ -56,24 +78,3 @@ func test() {
 	json.Unmarshal([]byte(string(bodyString)), &resp)
 	fmt.Println("------------", resp.Code)
 }
-
-//api响应值
-func Response(httpCode int, code string, msg string, data interface{}, c *gin.Context) {
-	//反射判断interface是否为空值
-	if reflect.TypeOf(data) != nil {
-		c.JSON(httpCode, response.Resp{ code,msg,data })
-	}
-	c.JSON(httpCode, response.Resp{ code,msg,map[string]interface{}{} })
-}
-
-//成功响应
-func ResponseHttpOK( code string, msg string, data interface{}, c *gin.Context) {
-	//反射判断interface是否为空值
-	if reflect.TypeOf(data) != nil {
-		c.JSON(http.StatusOK, response.Resp{ code,msg,data })
-	}
-	c.JSON(http.StatusOK, response.Resp{ code,msg,map[string]interface{}{} })
-}
-
-
-

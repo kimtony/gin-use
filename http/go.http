@@ -1,4 +1,4 @@
-@baseUrl = http://192.168.1.136:8081
+@baseUrl = http://192.168.1.163:8081
 
 ###
 GET  {{baseUrl}}/api/health
@@ -14,3 +14,7 @@ GET {{baseUrl}}/api/redis/test
 
 ###token
 GET {{baseUrl}}/api/token/test
+
+
+###token
+GET {{baseUrl}}/api/v1/ipfs/get_data?cid=QmQ4Pvi4HMMXPRT9c6Nsys213LdckW7MbEYwjL6wEVewPo

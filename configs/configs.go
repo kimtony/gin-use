@@ -131,6 +131,11 @@ func Get() Config {
 	return *config
 }
 
+//机器id
+func MachineId() string {
+	return "raspi4b8g-demo-0001"
+}
+
 //获取项目名字
 func ProjectName() string {
 	return "gin-use"
@@ -144,6 +149,10 @@ func ProjectHost() string {
 //获取端口
 func ProjectPort() string {
 	return "8081"
+}
+
+func IpfsAddr() string {
+	return "http://47.103.9.157:5001"
 }
 
 //获取consul地址

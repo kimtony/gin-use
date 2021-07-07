@@ -17,7 +17,7 @@ var r = gin.Default()
 
 func InitRouter() *gin.Engine {
 
-	api := r.Group("/api")
+	api := r.Group("")
 	{
 		api.Use(
 			middleware.CORSMiddleware(),  //cors跨域
@@ -31,8 +31,12 @@ func InitRouter() *gin.Engine {
 
 		apiV1 := api.Group("/v1")
 		{
-			apiV1.POST("/account/info", v1.AccountInfo)
+			apiV1.GET("/account/info", v1.AccountInfo)
 			apiV1.GET("/account/wechat", v1.Wechat)
+
+			//小说dapp
+			apiV1.GET("/ipfs/novel/get", v1.GetNovelData)
+			apiV1.POST("/ipfs/novel/upload", v1.PutNovelData)
 		}
 	}
 

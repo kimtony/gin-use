@@ -6,7 +6,7 @@ import (
 	// "io/ioutil"
 	// "strconv"
 	"reflect"
-	"gin-use/src/util/validator"
+	// "gin-use/src/util/validator"
 	"gin-use/src/model/request"
 	"github.com/gin-gonic/gin"
 	"github.com/tidwall/gjson"
@@ -28,9 +28,9 @@ func ApiValidator() gin.HandlerFunc {
 		// 获取结构体实例的反射类型对象
 		typeOfCat := reflect.TypeOf(req1)
 		fmt.Println("-----requireParams----", typeOfCat)
-		if err = validator.ParseRequest(c, &req1); err != nil {
-			return
-		}
+		// if err = validator.ParseRequest(c, &req1); err != nil {
+		// 	return
+		// }
 
 	
 	}

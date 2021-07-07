@@ -7,3 +7,8 @@ type Resp struct {
 	Data interface{} `json:"data"`
 }
 
+
+type GetNovelDataPaginte struct {
+	Sum   int  `json:"sum"`
+	Data  string  `json:"data"`
+}

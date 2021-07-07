@@ -1,28 +1,12 @@
 definitions:
-  model.Account:
+  response.Resp:
     properties:
-      id:
+      code:
         type: string
-      mobile:
+      data:
+        type: object
+      msg:
         type: string
-      name:
-        type: string
-    required:
-    - id
-    - name
-    type: object
-  request.WechatAccount:
-    properties:
-      mobile:
-        type: integer
-      nickname:
-        type: string
-      openid:
-        type: string
-    required:
-    - mobile
-    - nickname
-    - openid
     type: object
 host: 192.168.1.163:8081
 info:
@@ -33,7 +17,7 @@ info:
   title: swagger 接口文档
   version: "2.0"
 paths:
-  /api/health:
+  /health:
     get:
       consumes:
       - application/json
@@ -51,11 +35,39 @@ paths:
       summary: 健康检查接口
       tags:
       - 监测服务
-  /api/v1/account/info:
+  /v1/ipfs/novel/get:
+    get:
+      consumes:
+      - application/json
+      description: 小说dapp小说文本数据
+      parameters:
+      - description: string valid
+        in: query
+        name: cid
+        type: string
+      - description: int valid
+        in: query
+        name: num
+        type: integer
+      - description: int valid
+        in: query
+        name: page
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Resp'
+      summary: 根据hash下载ipfs数据
+      tags:
+      - 小说
+  /v1/ipfs/novel/upload:
     post:
       consumes:
       - application/json
-      description: 用户个人信息
+      description: 上传小说文本章节,文本类型txt等上传成功返回文本hash 并且需要记录一下数据到pg 小说标题,图片,作者,上传到ipfs的hash。
       parameters:
       - description: string valid
         in: query
@@ -63,48 +75,14 @@ paths:
         minLength: 5
         name: string
         type: string
-      - description: 微信参数
-        in: body
-        name: data
-        required: true
-        schema:
-          $ref: '#/definitions/model.Account'
       produces:
       - application/json
       responses:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/model.Account'
-      summary: request.WechatAccount
+            $ref: '#/definitions/response.Resp'
+      summary: 上传ipfs数据
       tags:
-      - account服务
-  /api/wechat:
-    post:
-      consumes:
-      - application/json
-      description: 微信服务
-      parameters:
-      - description: 微信参数
-        in: body
-        name: data
-        required: true
-        schema:
-          $ref: '#/definitions/request.WechatAccount'
-      - description: Authorization
-        in: header
-        name: token
-        required: true
-        type: string
-      produces:
-      - application/json
-      responses:
-        "200":
-          description: ""
-      security:
-      - OAuth2Application:
-        - account
-      summary: 微信服务
-      tags:
-      - 微信服务
+      - 小说
 swagger: "2.0"

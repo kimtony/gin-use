@@ -11,7 +11,7 @@
     },
     "host": "192.168.1.163:8081",
     "paths": {
-        "/api/health": {
+        "/health": {
             "get": {
                 "description": "服务是否启动正常检查",
                 "consumes": [
@@ -39,9 +39,9 @@
                 }
             }
         },
-        "/api/v1/account/info": {
-            "post": {
-                "description": "用户个人信息",
+        "/v1/ipfs/novel/get": {
+            "get": {
+                "description": "小说dapp小说文本数据",
                 "consumes": [
                     "application/json"
                 ],
@@ -49,9 +49,52 @@
                     "application/json"
                 ],
                 "tags": [
-                    "account服务"
+                    "小说"
                 ],
-                "summary": "request.WechatAccount",
+                "summary": "根据hash下载ipfs数据",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "string valid",
+                        "name": "cid",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "int valid",
+                        "name": "num",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "int valid",
+                        "name": "page",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/response.Resp"
+                        }
+                    }
+                }
+            }
+        },
+        "/v1/ipfs/novel/upload": {
+            "post": {
+                "description": "上传小说文本章节,文本类型txt等上传成功返回文本hash 并且需要记录一下数据到pg 小说标题,图片,作者,上传到ipfs的hash。",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "小说"
+                ],
+                "summary": "上传ipfs数据",
                 "parameters": [
                     {
                         "maxLength": 10,
@@ -60,107 +103,30 @@
                         "description": "string valid",
                         "name": "string",
                         "in": "query"
-                    },
-                    {
-                        "description": "微信参数",
-                        "name": "data",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/model.Account"
-                        }
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/model.Account"
+                            "$ref": "#/definitions/response.Resp"
                         }
-                    }
-                }
-            }
-        },
-        "/api/wechat": {
-            "post": {
-                "security": [
-                    {
-                        "OAuth2Application": [
-                            "account"
-                        ]
-                    }
-                ],
-                "description": "微信服务",
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "微信服务"
-                ],
-                "summary": "微信服务",
-                "parameters": [
-                    {
-                        "description": "微信参数",
-                        "name": "data",
-                        "in": "body",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/request.WechatAccount"
-                        }
-                    },
-                    {
-                        "type": "string",
-                        "description": "Authorization",
-                        "name": "token",
-                        "in": "header",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": ""
                     }
                 }
             }
         }
     },
     "definitions": {
-        "model.Account": {
+        "response.Resp": {
             "type": "object",
-            "required": [
-                "id",
-                "name"
-            ],
             "properties": {
-                "id": {
+                "code": {
                     "type": "string"
                 },
-                "mobile": {
-                    "type": "string"
+                "data": {
+                    "type": "object"
                 },
-                "name": {
-                    "type": "string"
-                }
-            }
-        },
-        "request.WechatAccount": {
-            "type": "object",
-            "required": [
-                "mobile",
-                "nickname",
-                "openid"
-            ],
-            "properties": {
-                "mobile": {
-                    "type": "integer"
-                },
-                "nickname": {
-                    "type": "string"
-                },
-                "openid": {
+                "msg": {
                     "type": "string"
                 }
             }

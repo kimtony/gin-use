@@ -17,7 +17,7 @@ var (
 	//consul服务id 用项目名+ip
 	registrationId = fmt.Sprintf("%s:%s", configs.ProjectName(), configs.GetLocalIp()[0])
 	//consul健康检查
-	apiHealth = fmt.Sprintf("%s:%s/api/health", configs.ProjectHost(), configs.ProjectPort())
+	apiHealth = fmt.Sprintf("%s:%s/health", configs.ProjectHost(), configs.ProjectPort())
 )
 
 // 注册服务到consul
